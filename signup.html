@@ -69,6 +69,21 @@
               </svg>
             </button>
           </div>
+          <div class="auth-field auth-password-field">
+            <label for="signupConfirmPassword" class="sr-only">Confirm password</label>
+            <input type="password" id="signupConfirmPassword" class="auth-input auth-input-light" placeholder="Confirm password" autocomplete="new-password" required>
+            <button type="button" class="auth-pw-toggle auth-pw-toggle-light" id="signupConfirmPwToggle" aria-label="Toggle confirm password visibility">
+              <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <svg class="eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
+          <div id="signupError" class="auth-error-msg" style="display:none;" role="alert"></div>
           <p class="auth-input-hint">Use 8+ characters with a number and a symbol.</p>
 
           <button type="submit" class="btn btn-primary auth-submit-btn signup-continue-btn">Continue</button>
@@ -143,24 +158,113 @@
 
   <script src="script.js"></script>
   <script>
-    // Password toggle
-    const pwToggle = document.getElementById('signupPwToggle');
-    const pwInput = document.getElementById('signupPassword');
-    if (pwToggle && pwInput) {
-      pwToggle.addEventListener('click', () => {
-        const isHidden = pwInput.type === 'password';
-        pwInput.type = isHidden ? 'text' : 'password';
-        pwToggle.querySelector('.eye-open').style.display = isHidden ? 'none' : '';
-        pwToggle.querySelector('.eye-closed').style.display = isHidden ? '' : 'none';
-      });
+    // Password visibility toggle helper
+    function setupPasswordToggle(toggleId, inputId) {
+      const toggle = document.getElementById(toggleId);
+      const input = document.getElementById(inputId);
+      if (toggle && input) {
+        toggle.addEventListener('click', () => {
+          const isHidden = input.type === 'password';
+          input.type = isHidden ? 'text' : 'password';
+          toggle.querySelector('.eye-open').style.display = isHidden ? 'none' : '';
+          toggle.querySelector('.eye-closed').style.display = isHidden ? '' : 'none';
+        });
+      }
     }
-    // Signup form
+    setupPasswordToggle('signupPwToggle', 'signupPassword');
+    setupPasswordToggle('signupConfirmPwToggle', 'signupConfirmPassword');
+
+    // Signup form & validation
     const signupForm = document.getElementById('signupForm');
+    const pwInput = document.getElementById('signupPassword');
+    const confirmInput = document.getElementById('signupConfirmPassword');
+    const errorDiv = document.getElementById('signupError');
+
+    function showError(msg, targetInput) {
+      if (errorDiv) {
+        errorDiv.textContent = msg;
+        errorDiv.style.display = 'flex';
+      }
+      if (targetInput) {
+        targetInput.classList.add('is-invalid');
+        targetInput.focus();
+      }
+    }
+
+    function clearError() {
+      if (errorDiv) {
+        errorDiv.textContent = '';
+        errorDiv.style.display = 'none';
+      }
+      pwInput?.classList.remove('is-invalid');
+      confirmInput?.classList.remove('is-invalid');
+    }
+
+    // Real-time mismatch feedback
+    confirmInput?.addEventListener('input', () => {
+      if (confirmInput.value.length > 0 && confirmInput.value !== pwInput.value) {
+        confirmInput.classList.add('is-invalid');
+      } else {
+        confirmInput.classList.remove('is-invalid');
+        if (confirmInput.value.length > 0 && confirmInput.value === pwInput.value) {
+          clearError();
+        }
+      }
+    });
+
+    pwInput?.addEventListener('input', () => {
+      if (confirmInput.value.length > 0) {
+        if (confirmInput.value !== pwInput.value) {
+          confirmInput.classList.add('is-invalid');
+        } else {
+          confirmInput.classList.remove('is-invalid');
+          clearError();
+        }
+      }
+    });
+
     if (signupForm) {
       signupForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const name = document.getElementById('signupName')?.value.trim() || '';
-        const email = document.getElementById('signupEmail')?.value.trim() || '';
+        clearError();
+
+        const nameInput = document.getElementById('signupName');
+        const emailInput = document.getElementById('signupEmail');
+        const name = nameInput?.value.trim() || '';
+        const email = emailInput?.value.trim() || '';
+        const password = pwInput?.value || '';
+        const confirmPassword = confirmInput?.value || '';
+
+        if (!name) {
+          showError('Please enter your full name.', nameInput);
+          return;
+        }
+
+        if (!email) {
+          showError('Please enter your work email.', emailInput);
+          return;
+        }
+
+        if (!password) {
+          showError('Please create a password.', pwInput);
+          return;
+        }
+
+        if (password.length < 8) {
+          showError('Password must be at least 8 characters long.', pwInput);
+          return;
+        }
+
+        if (!confirmPassword) {
+          showError('Please confirm your password.', confirmInput);
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          showError('Passwords do not match. Please verify and try again.', confirmInput);
+          return;
+        }
+
         // Save for login page awareness
         localStorage.setItem('stackly_signup_name', name);
         localStorage.setItem('stackly_signup_email', email);

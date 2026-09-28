@@ -733,6 +733,17 @@ ul, ol {
     max-width: 440px;
     margin: 0 auto;
   }
+
+  /* Center person's face in hero background slideshow on mobile / tablet */
+  .hero-slide--1 img {
+    object-position: 29% 22%;
+  }
+  .hero-slide--2 img {
+    object-position: 65% 20%;
+  }
+  .hero-slide--3 img {
+    object-position: 63% 22%;
+  }
 }
 
 @media (max-width: 580px) {
@@ -745,6 +756,17 @@ ul, ol {
   }
   .hero-visual-wrapper:hover .hero-layers-container {
     transform: none;
+  }
+
+  /* Specific focal point on mobile phone screen ratios */
+  .hero-slide--1 img {
+    object-position: 28% 20%;
+  }
+  .hero-slide--2 img {
+    object-position: 65% 18%;
+  }
+  .hero-slide--3 img {
+    object-position: 63% 20%;
   }
 }
 
@@ -5669,6 +5691,26 @@ a.info-row-val:hover {
   font-size: 0.84rem;
   color: #64748b;
   margin: -6px 0 6px 4px;
+}
+
+.auth-input.is-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.18) !important;
+}
+
+.auth-input.is-valid {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15) !important;
+}
+
+.auth-error-msg {
+  font-size: 0.84rem;
+  color: #ef4444;
+  margin: -6px 0 6px 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
 }
 
 /* Remember Me & Forgot */
