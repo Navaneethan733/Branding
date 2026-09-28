@@ -179,12 +179,14 @@ ul, ol {
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   transition: all var(--transition-base);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .arrow-circle-btn svg {
@@ -192,15 +194,30 @@ ul, ol {
 }
 
 .card:hover .arrow-circle-btn,
-.case-card:hover .arrow-circle-btn {
-  background: #ffffff;
-  color: #121316;
-  transform: scale(1.06);
+.case-card:hover .arrow-circle-btn,
+.case-card-featured:hover .arrow-circle-btn,
+.case-card-small:hover .arrow-circle-btn {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 .card:hover .arrow-circle-btn svg,
-.case-card:hover .arrow-circle-btn svg {
+.case-card:hover .arrow-circle-btn svg,
+.case-card-featured:hover .arrow-circle-btn svg,
+.case-card-small:hover .arrow-circle-btn svg {
   transform: translate(2px, -2px);
+}
+
+.arrow-circle-btn:hover {
+  background: #ffffff !important;
+  color: #121316 !important;
+  transform: scale(1.14) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.arrow-circle-btn:active {
+  transform: scale(0.96) !important;
 }
 
 /* Section Header Typography */
