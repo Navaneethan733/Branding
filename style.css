@@ -1724,12 +1724,24 @@ ul, ol {
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   cursor: pointer;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.newsletter-btn svg,
+.newsletter-btn i {
+  flex-shrink: 0;
+  font-size: 1.1rem;
   transition: transform var(--transition-fast);
 }
 
 .newsletter-btn:hover {
+  color: #ffd074;
+}
+
+.newsletter-btn:hover svg,
+.newsletter-btn:hover i {
   transform: translateX(4px);
 }
 
@@ -2524,6 +2536,18 @@ body.preloader-active {
 .service-layer-card:hover .service-card-price {
   transform: translateX(4px);
   color: #1b493f;
+}
+
+.service-card-price svg,
+.service-card-price i {
+  flex-shrink: 0;
+  font-size: 1rem;
+  transition: transform var(--transition-fast);
+}
+
+.service-layer-card:hover .service-card-price svg,
+.service-layer-card:hover .service-card-price i {
+  transform: translateX(3px);
 }
 
 @media (max-width: 960px) {
@@ -3529,7 +3553,11 @@ body.preloader-active {
   transition: all var(--transition-fast);
 }
 
-.about-team-cta-link span {
+.about-team-cta-link span,
+.about-team-cta-link svg,
+.about-team-cta-link i {
+  flex-shrink: 0;
+  font-size: 1.1rem;
   transition: transform var(--transition-fast);
 }
 
@@ -3537,7 +3565,9 @@ body.preloader-active {
   color: #c98b27;
 }
 
-.about-team-cta-link:hover span {
+.about-team-cta-link:hover span,
+.about-team-cta-link:hover svg,
+.about-team-cta-link:hover i {
   transform: translateX(4px);
 }
 
@@ -3716,7 +3746,11 @@ body.preloader-active {
   width: fit-content;
 }
 
-.about-hire-link span {
+.about-hire-link span,
+.about-hire-link svg,
+.about-hire-link i {
+  flex-shrink: 0;
+  font-size: 1.1rem;
   transition: transform var(--transition-fast);
 }
 
@@ -3724,7 +3758,9 @@ body.preloader-active {
   color: #c98b27;
 }
 
-.about-hire-link:hover span {
+.about-hire-link:hover span,
+.about-hire-link:hover svg,
+.about-hire-link:hover i {
   transform: translateX(5px);
 }
 
@@ -4346,6 +4382,19 @@ body.preloader-active {
 .page-pill:disabled {
   opacity: 0.35;
   cursor: not-allowed;
+}
+
+.page-pill i {
+  font-size: 1.05rem;
+  transition: transform var(--transition-fast);
+}
+
+.page-pill:hover:not(:disabled) i.fa-circle-arrow-right {
+  transform: translateX(2px);
+}
+
+.page-pill:hover:not(:disabled) i.fa-circle-arrow-left {
+  transform: translateX(-2px);
 }
 
 /* Responsive adjustments for Blog */

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="dashboard.css">
 </head>
@@ -56,15 +57,9 @@
           <span>Retainer &amp; Invoices</span>
         </button>
 
-        <div class="dash-nav-section-title">Portals &amp; Views</div>
-        <a href="admin-dashboard.html" class="dash-role-switch" title="Switch to Admin Dashboard">
-          <span>⚡ Switch to Admin View</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-
         <a href="index.html" class="dash-role-switch" title="Back to main website">
-          <span>🏠 Return to Website</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <span><i class="fa-solid fa-house"></i> Return to Website</span>
+          <i class="fa-solid fa-chevron-right"></i>
         </a>
       </nav>
 
@@ -210,7 +205,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 Current Sprint Deliverables
               </h2>
-              <a href="#" class="dash-card-action" onclick="switchTab('projects'); return false;">View All Projects →</a>
+              <a href="#" class="dash-card-action" onclick="switchTab('projects'); return false;">View All Projects <i class="fa-solid fa-circle-arrow-right"></i></a>
             </div>
 
             <div class="dash-project-list">
@@ -356,7 +351,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Core Brand Kit Assets
               </h2>
-              <a href="#" class="dash-card-action" onclick="switchTab('assets'); return false;">Asset Library (148) →</a>
+              <a href="#" class="dash-card-action" onclick="switchTab('assets'); return false;">Asset Library (148) <i class="fa-solid fa-circle-arrow-right"></i></a>
             </div>
 
             <div class="dash-asset-grid">
@@ -512,6 +507,99 @@
             </div>
           </div>
         </div>
+
+        <!-- Section 1: Sprint Velocity & Burndown Pacing -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-chart-line" style="color: #14b8a6; margin-right: 8px;"></i> Sprint Velocity &amp; Delivery Timeline</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Q4 Sprint schedule and current burndown pacing.</p>
+            </div>
+            <span class="dash-badge-status badge-completed">94% On-Track</span>
+          </div>
+
+          <div class="dash-stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 20px;">
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Velocity Score</div>
+              <div class="dash-stat-value" style="color: #14b8a6;">48 pts</div>
+              <div class="dash-stat-foot"><span>Target: 45 pts / sprint</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Revision Rate</div>
+              <div class="dash-stat-value" style="color: #f4ab36;">1.2 avg</div>
+              <div class="dash-stat-foot"><span>Industry benchmark: 2.8</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Next Major Sign-off</div>
+              <div class="dash-stat-value" style="font-size: 1.15rem; color: #fff;">Oct 04, 2024</div>
+              <div class="dash-stat-foot"><span>Figma Hi-Fi Hand-off</span></div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 18px 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+              <span style="font-weight: 700; font-size: 0.9rem; color: #fff;">Sprint Workflow Phase</span>
+              <span style="color: #14b8a6; font-size: 0.82rem; font-weight: 600;">Phase 3: Production &amp; Verification</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; text-align: center;">
+              <div style="background: rgba(20,184,166,0.15); border: 1px solid rgba(20,184,166,0.4); border-radius: 8px; padding: 10px 6px;">
+                <div style="color: #2dd4bf; font-weight: 700; font-size: 0.78rem;">1. Discovery</div>
+                <div style="color: #64748b; font-size: 0.7rem; margin-top: 2px;">Completed</div>
+              </div>
+              <div style="background: rgba(20,184,166,0.15); border: 1px solid rgba(20,184,166,0.4); border-radius: 8px; padding: 10px 6px;">
+                <div style="color: #2dd4bf; font-weight: 700; font-size: 0.78rem;">2. Concepts</div>
+                <div style="color: #64748b; font-size: 0.7rem; margin-top: 2px;">Completed</div>
+              </div>
+              <div style="background: rgba(244,171,54,0.15); border: 1px solid rgba(244,171,54,0.4); border-radius: 8px; padding: 10px 6px;">
+                <div style="color: #f4ab36; font-weight: 700; font-size: 0.78rem;">3. Production</div>
+                <div style="color: #f4ab36; font-size: 0.7rem; margin-top: 2px;">Active Now</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 6px;">
+                <div style="color: #94a3b8; font-weight: 600; font-size: 0.78rem;">4. Client Review</div>
+                <div style="color: #64748b; font-size: 0.7rem; margin-top: 2px;">Queued</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 6px;">
+                <div style="color: #94a3b8; font-weight: 600; font-size: 0.78rem;">5. Final Staging</div>
+                <div style="color: #64748b; font-size: 0.7rem; margin-top: 2px;">Oct 14</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Open Feedback & Revision Queue -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-comments" style="color: #8b5cf6; margin-right: 8px;"></i> Open Feedback &amp; Revision Queue</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Items awaiting Apex Global comments or sign-offs.</p>
+            </div>
+            <button type="button" class="dash-cta-btn dash-cta-btn-teal" style="font-size: 0.8rem; padding: 7px 14px;" onclick="window.location.href='404.html'">+ Add Comment</button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="dash-milestone-item" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <div style="font-weight: 600; font-size: 0.92rem; color: #fff;">Dark Mode Navigation Contrast Audit</div>
+                <div style="color: #7b8292; font-size: 0.8rem; margin-top: 2px;">Added by Marcus Cole • 4 comments from Sarah Chen</div>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <span class="dash-badge-status badge-in-progress">Needs Approval</span>
+                <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Open Thread ↗</button>
+              </div>
+            </div>
+
+            <div class="dash-milestone-item" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <div style="font-weight: 600; font-size: 0.92rem; color: #fff;">3D Mesh Shimmer Animation Speed (Hero section)</div>
+                <div style="color: #7b8292; font-size: 0.8rem; margin-top: 2px;">Added by Tariq Reed • Updated shader easing curve</div>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <span class="dash-badge-status badge-completed">Review Ready</span>
+                <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Inspect Motion ↗</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- VIEW TAB 3: BRAND ASSETS -->
@@ -579,6 +667,75 @@
             <button type="button" class="dash-asset-btn" onclick="window.location.href='404.html'">↓ Download GLTF</button>
           </div>
         </div>
+
+        <!-- Section 1: Typography System & Font Specimen -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-font" style="color: #f4ab36; margin-right: 8px;"></i> Brand Typography System &amp; Webfonts</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Licensed typefaces configured for digital, print, and application UI.</p>
+            </div>
+            <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Download Webfonts (.WOFF2)</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px;">
+              <span class="dash-badge-status" style="background: rgba(244,171,54,0.15); color: #f4ab36;">Primary Display Type</span>
+              <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.6rem; font-weight: 800; color: #fff; margin: 12px 0 6px;">Plus Jakarta Sans</div>
+              <div style="color: #94a3b8; font-size: 0.84rem; line-height: 1.5;">Modern geometric neo-grotesque with clean apertures, optimized for high-impact headlines and micro-copy readability.</div>
+              <div style="display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap;">
+                <span style="background: #1e2129; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #cbd5e1;">Bold 700</span>
+                <span style="background: #1e2129; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #cbd5e1;">SemiBold 600</span>
+                <span style="background: #1e2129; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #cbd5e1;">Regular 400</span>
+              </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px;">
+              <span class="dash-badge-status" style="background: rgba(20,184,166,0.15); color: #14b8a6;">Accent &amp; Hero Headline</span>
+              <div style="font-family: 'Syne', sans-serif, system-ui; font-size: 1.6rem; font-weight: 800; color: #fff; margin: 12px 0 6px;">Syne Black Display</div>
+              <div style="color: #94a3b8; font-size: 0.84rem; line-height: 1.5;">Expressive, distinctive display font with striking structural contrast, reserved for high-level hero statements and cover designs.</div>
+              <div style="display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap;">
+                <span style="background: #1e2129; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #cbd5e1;">ExtraBold 800</span>
+                <span style="background: #1e2129; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #cbd5e1;">Display Regular</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Brand Guidelines & Usage Rules -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-shield-halved" style="color: #10b981; margin-right: 8px;"></i> Brand Usage Rules &amp; Compliance</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Core standards for marketing collateral, co-branding, and partners.</p>
+            </div>
+            <button type="button" class="dash-cta-btn dash-cta-btn-teal" style="font-size: 0.8rem; padding: 7px 14px;" onclick="window.location.href='404.html'">Open Brand Manual</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+            <div style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.25); border-radius: 14px; padding: 18px;">
+              <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-weight: 700; margin-bottom: 8px;">
+                <i class="fa-solid fa-circle-check"></i> Recommended Usage
+              </div>
+              <ul style="margin: 0; padding-left: 18px; color: #94a3b8; font-size: 0.83rem; line-height: 1.6;">
+                <li>Maintain a minimum clear space equal to the height of the logo mark 'S'.</li>
+                <li>Display primary logo mark on dark obsidian backgrounds (#0D0E12).</li>
+                <li>Use vector SVG assets exclusively for high-density web displays.</li>
+              </ul>
+            </div>
+
+            <div style="background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.25); border-radius: 14px; padding: 18px;">
+              <div style="display: flex; align-items: center; gap: 8px; color: #ef4444; font-weight: 700; margin-bottom: 8px;">
+                <i class="fa-solid fa-circle-xmark"></i> Prohibited Variations
+              </div>
+              <ul style="margin: 0; padding-left: 18px; color: #94a3b8; font-size: 0.83rem; line-height: 1.6;">
+                <li>Do not stretch, skew, or rotate the logomark at non-standard angles.</li>
+                <li>Do not apply unapproved gradient dropshadows or heavy bevel filters.</li>
+                <li>Do not pair the logo mark with unverified third-party color palettes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- VIEW TAB 4: CREATIVE TEAM -->
@@ -639,6 +796,88 @@
             </button>
           </div>
         </div>
+
+        <!-- Section 1: Scheduled Working Sessions & Design Syncs -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-calendar-check" style="color: #f4ab36; margin-right: 8px;"></i> Scheduled Working Sessions &amp; Design Syncs</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Dedicated calendar meetings between Apex Global and the Stackly creative pod.</p>
+            </div>
+            <button type="button" class="dash-cta-btn dash-cta-btn-teal" style="font-size: 0.8rem; padding: 7px 14px;" onclick="window.location.href='404.html'">+ Propose New Time</button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="dash-milestone-item" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+              <div style="display: flex; gap: 14px; align-items: center;">
+                <div style="background: rgba(244,171,54,0.15); border: 1px solid rgba(244,171,54,0.3); border-radius: 10px; width: 44px; height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #f4ab36; font-weight: 800; font-size: 0.72rem; line-height: 1.1;">
+                  <span>OCT</span>
+                  <span style="font-size: 0.95rem;">02</span>
+                </div>
+                <div>
+                  <div style="font-weight: 600; font-size: 0.92rem; color: #fff;">Sprint 4 Milestone Demo &amp; Review</div>
+                  <div style="color: #7b8292; font-size: 0.8rem; margin-top: 2px;">10:00 AM – 10:45 AM EST • With Elena Vance &amp; Marcus Cole</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Add to Google Cal</button>
+                <button type="button" class="dash-cta-btn dash-cta-btn-teal" style="padding: 6px 14px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Join Video Call</button>
+              </div>
+            </div>
+
+            <div class="dash-milestone-item" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+              <div style="display: flex; gap: 14px; align-items: center;">
+                <div style="background: rgba(20,184,166,0.15); border: 1px solid rgba(20,184,166,0.3); border-radius: 10px; width: 44px; height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #2dd4bf; font-weight: 800; font-size: 0.72rem; line-height: 1.1;">
+                  <span>OCT</span>
+                  <span style="font-size: 0.95rem;">08</span>
+                </div>
+                <div>
+                  <div style="font-weight: 600; font-size: 0.92rem; color: #fff;">WebGL &amp; Interaction Motion Lab Session</div>
+                  <div style="color: #7b8292; font-size: 0.8rem; margin-top: 2px;">2:30 PM – 3:15 PM EST • With Tariq Reed</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Add to Google Cal</button>
+                <button type="button" class="dash-cta-btn dash-cta-btn-teal" style="padding: 6px 14px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Join Video Call</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Studio Pod Bandwidth & Sprint Allocation -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-clock" style="color: #2dd4bf; margin-right: 8px;"></i> Studio Pod Bandwidth &amp; Sprint Allocation</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Dedicated creative capacity distribution for this month's retainer.</p>
+            </div>
+            <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Request Bandwidth Add-on</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">Creative Direction (Elena)</span>
+                <span style="color: #fff; font-weight: 700;">10 / 12 hrs</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 83%;"></div></div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">Brand Strategy (Marcus)</span>
+                <span style="color: #fff; font-weight: 700;">12 / 14 hrs</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill dash-progress-fill-teal" style="width: 86%;"></div></div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">3D Motion &amp; Shader (Tariq)</span>
+                <span style="color: #fff; font-weight: 700;">10 / 14 hrs</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 71%; background: #8b5cf6;"></div></div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- VIEW TAB 5: BILLING & INVOICES -->
@@ -690,6 +929,79 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <!-- Section 1: Monthly Retainer Hours & Utilization -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-chart-pie" style="color: #14b8a6; margin-right: 8px;"></i> September Retainer Utilization &amp; Rollover</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Dedicated Monthly Retainer: 40 studio hours • 8 unused hours roll over automatically.</p>
+            </div>
+            <span class="dash-badge-status badge-completed">Healthy Usage</span>
+          </div>
+
+          <div class="dash-stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 20px;">
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Hours Utilized</div>
+              <div class="dash-stat-value" style="color: #14b8a6;">32 hrs</div>
+              <div class="dash-stat-foot"><span>80% of monthly quota</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Rollover Buffer</div>
+              <div class="dash-stat-value" style="color: #f4ab36;">+8 hrs</div>
+              <div class="dash-stat-foot"><span>Applies to October sprint</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Next Renewal Date</div>
+              <div class="dash-stat-value" style="font-size: 1.15rem; color: #fff;">Oct 01, 2024</div>
+              <div class="dash-stat-foot"><span>Auto-renews at $25k</span></div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 18px 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #fff;">Monthly Retainer Cap (40 Hours)</span>
+              <span style="font-size: 0.85rem; color: #14b8a6; font-weight: 700;">32 / 40 hrs logged</span>
+            </div>
+            <div class="dash-progress-bar" style="height: 10px;">
+              <div class="dash-progress-fill dash-progress-fill-teal" style="width: 80%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Payment Method & Tax Information -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-credit-card" style="color: #f4ab36; margin-right: 8px;"></i> Payment Method &amp; Tax Information</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Corporate accounts payable settings and default invoice recipient.</p>
+            </div>
+            <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Update Details</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <i class="fa-brands fa-cc-mastercard" style="font-size: 1.8rem; color: #f4ab36;"></i>
+                  <div>
+                    <div style="color: #fff; font-weight: 700; font-size: 0.92rem;">Mastercard Corporate •••• 4821</div>
+                    <div style="color: #7b8292; font-size: 0.78rem;">Expires 09/27 • Default billing card</div>
+                  </div>
+                </div>
+                <span class="dash-badge-status badge-completed">Active</span>
+              </div>
+              <div style="color: #94a3b8; font-size: 0.8rem;">Auto-charge enabled on the 1st of each calendar month.</div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 18px;">
+              <div style="color: #fff; font-weight: 700; font-size: 0.92rem; margin-bottom: 6px;">Billing Entity &amp; Tax ID</div>
+              <div style="color: #cbd5e1; font-size: 0.85rem;">Apex Global Ventures Inc.</div>
+              <div style="color: #7b8292; font-size: 0.8rem; margin-top: 4px;">Tax ID: US-EIN-92-3849102 • billing@apexglobal.com</div>
+              <div style="color: #7b8292; font-size: 0.8rem; margin-top: 2px;">One World Trade Center, Suite 74B, New York, NY</div>
+            </div>
           </div>
         </div>
       </section>

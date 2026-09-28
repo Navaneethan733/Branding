@@ -192,10 +192,32 @@
   transition: all 0.2s ease;
 }
 
+.dash-role-switch span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dash-role-switch .fa-house {
+  font-size: 0.88rem;
+  color: #f4ab36;
+}
+
+.dash-role-switch .fa-chevron-right {
+  font-size: 0.72rem;
+  opacity: 0.6;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
 .dash-role-switch:hover {
   background: #20242e;
   color: #ffffff;
   border-color: rgba(244, 171, 54, 0.4);
+}
+
+.dash-role-switch:hover .fa-chevron-right {
+  opacity: 1;
+  transform: translateX(2px);
 }
 
 .dash-user-card {
@@ -607,12 +629,25 @@
   color: var(--accent-gold, #f4ab36);
   text-decoration: none;
   font-weight: 600;
-  transition: opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .dash-card-action:hover {
-  opacity: 0.8;
-  text-decoration: underline;
+  opacity: 0.85;
+  text-decoration: none;
+  transform: translateX(3px);
+}
+
+.dash-card-action i {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.dash-card-action:hover i {
+  transform: translateX(2px);
 }
 
 /* Project Item Row */

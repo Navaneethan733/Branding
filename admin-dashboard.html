@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="dashboard.css">
 </head>
@@ -57,15 +58,9 @@
           <span>Financials &amp; MRR</span>
         </button>
 
-        <div class="dash-nav-section-title">Portals &amp; Views</div>
-        <a href="user-dashboard.html" class="dash-role-switch" title="Switch to Client View">
-          <span>👤 Switch to Client View</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-
         <a href="index.html" class="dash-role-switch" title="Back to main website">
-          <span>🏠 Return to Website</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <span><i class="fa-solid fa-house"></i> Return to Website</span>
+          <i class="fa-solid fa-chevron-right"></i>
         </a>
       </nav>
 
@@ -267,7 +262,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></svg>
                 Inbound Inquiries
               </h2>
-              <a href="#" class="dash-card-action" onclick="switchTab('inquiries'); return false;">View All (9) →</a>
+              <a href="#" class="dash-card-action" onclick="switchTab('inquiries'); return false;">View All (9) <i class="fa-solid fa-circle-arrow-right"></i></a>
             </div>
 
             <div class="dash-project-list">
@@ -505,6 +500,89 @@
             </div>
           </div>
         </div>
+
+        <!-- Section 1: Retainer Renewals & Contract Pipeline -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-handshake" style="color: #f4ab36; margin-right: 8px;"></i> Retainer Renewals &amp; Contract Pipeline</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Q4 2024 contract cycles and expected expansion revenue.</p>
+            </div>
+            <span class="dash-badge-status badge-completed">100% Renewal Rate</span>
+          </div>
+
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Client Account</th>
+                  <th>Contract Term</th>
+                  <th>Monthly Retainer</th>
+                  <th>Renewal Target</th>
+                  <th>Expansion Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Apex Global</strong></td>
+                  <td>12 Months (Month 10)</td>
+                  <td style="color: #f4ab36; font-weight: 700;">$25,000 / mo</td>
+                  <td>Nov 30, 2024</td>
+                  <td><span class="dash-badge-status badge-completed">High Intent (+20% Scope)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>HyperScale Cloud</strong></td>
+                  <td>6 Months (Month 4)</td>
+                  <td style="color: #f4ab36; font-weight: 700;">$30,000 / mo</td>
+                  <td>Dec 15, 2024</td>
+                  <td><span class="dash-badge-status badge-in-progress">In Discussion</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Fielder Logistics</strong></td>
+                  <td>Ongoing Retainer</td>
+                  <td style="color: #f4ab36; font-weight: 700;">$20,000 / mo</td>
+                  <td>Auto-renews Q1</td>
+                  <td><span class="dash-badge-status badge-completed">Stable Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Section 2: Client Communications & Inquiries -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-headset" style="color: #14b8a6; margin-right: 8px;"></i> Client Inquiries &amp; Priority Tickets</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Active support threads and sprint change requests.</p>
+            </div>
+            <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">View All Tickets</button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="dash-milestone-item" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <div style="font-weight: 600; font-size: 0.92rem; color: #fff;">HyperScale Cloud • Request for Additional 3D Shader Staging</div>
+                <div style="color: #7b8292; font-size: 0.8rem; margin-top: 2px;">Assigned to Tariq Reed • High Priority • 2 hours ago</div>
+              </div>
+              <div style="display: flex; gap: 10px;">
+                <span class="dash-badge-status badge-in-progress">Open</span>
+                <button type="button" class="dash-cta-btn" style="padding: 6px 12px; font-size: 0.78rem;" onclick="window.location.href='404.html'">Respond</button>
+              </div>
+            </div>
+
+            <div class="dash-milestone-item" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <div style="font-weight: 600; font-size: 0.92rem; color: #fff;">Apex Global • Design Token Export for iOS Dev Team</div>
+                <div style="color: #7b8292; font-size: 0.8rem; margin-top: 2px;">Assigned to Elena Vance • Standard Request • Yesterday</div>
+              </div>
+              <div style="display: flex; gap: 10px;">
+                <span class="dash-badge-status badge-completed">Resolved</span>
+                <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">View Thread</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- VIEW TAB 3: INBOUND LEADS -->
@@ -572,6 +650,91 @@
             </table>
           </div>
         </div>
+
+        <!-- Section 1: Lead Conversion Funnel & Pipeline Analytics -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-filter" style="color: #f4ab36; margin-right: 8px;"></i> Studio Pipeline Funnel &amp; Deal Velocity</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Conversion efficiency from first contact to signed retainer contract.</p>
+            </div>
+            <span class="dash-badge-status badge-completed">68% Win Rate</span>
+          </div>
+
+          <div class="dash-stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 20px;">
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Total Inquiries (MTD)</div>
+              <div class="dash-stat-value" style="color: #fff;">38</div>
+              <div class="dash-stat-foot"><span>+14% vs last month</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Pipeline Value</div>
+              <div class="dash-stat-value" style="color: #f4ab36;">$145,000</div>
+              <div class="dash-stat-foot"><span>High-confidence deals</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Avg Sales Cycle</div>
+              <div class="dash-stat-value" style="color: #14b8a6;">12 Days</div>
+              <div class="dash-stat-foot"><span>Inquiry to kickoff</span></div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 18px 20px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 12px;">
+              <span>Deal Stage Distribution</span>
+              <span style="color: #f4ab36;">$145,000 Pipeline</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center;">
+              <div style="background: #171920; border-radius: 8px; padding: 10px;">
+                <div style="font-size: 1.1rem; font-weight: 800; color: #fff;">18</div>
+                <div style="font-size: 0.72rem; color: #8c93a3; margin-top: 2px;">Inbound Discovery</div>
+              </div>
+              <div style="background: #171920; border-radius: 8px; padding: 10px;">
+                <div style="font-size: 1.1rem; font-weight: 800; color: #f4ab36;">9</div>
+                <div style="font-size: 0.72rem; color: #8c93a3; margin-top: 2px;">Pitch &amp; Scope Deck</div>
+              </div>
+              <div style="background: #171920; border-radius: 8px; padding: 10px;">
+                <div style="font-size: 1.1rem; font-weight: 800; color: #2dd4bf;">6</div>
+                <div style="font-size: 0.72rem; color: #8c93a3; margin-top: 2px;">Contract Review</div>
+              </div>
+              <div style="background: rgba(20,184,166,0.15); border: 1px solid rgba(20,184,166,0.4); border-radius: 8px; padding: 10px;">
+                <div style="font-size: 1.1rem; font-weight: 800; color: #10b981;">5</div>
+                <div style="font-size: 0.72rem; color: #10b981; margin-top: 2px;">Closed Won (Sep)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Pitch Deck & Proposal Generator -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-file-signature" style="color: #2dd4bf; margin-right: 8px;"></i> Custom Proposal Templates &amp; Pitch Assets</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Standard scope packages ready for instant delivery to enterprise prospects.</p>
+            </div>
+            <button type="button" class="dash-cta-btn" style="font-size: 0.8rem; padding: 7px 14px;" onclick="window.location.href='404.html'">+ Generate Scope Proposal</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-weight: 700; color: #fff; font-size: 0.95rem;">Full Brand Identity Package</span>
+                <span style="color: #f4ab36; font-weight: 700; font-size: 0.85rem;">$25k / mo</span>
+              </div>
+              <p style="color: #8c93a3; font-size: 0.82rem; line-height: 1.5; margin-bottom: 14px;">Includes 360 positioning, logo architecture, typography licensing, and 3D brand kit.</p>
+              <button type="button" class="dash-project-action-btn" style="width: 100%; text-align: center;" onclick="window.location.href='404.html'">Duplicate Scope Spec ↗</button>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-weight: 700; color: #fff; font-size: 0.95rem;">WebGL Digital Experience</span>
+                <span style="color: #2dd4bf; font-weight: 700; font-size: 0.85rem;">$30k / mo</span>
+              </div>
+              <p style="color: #8c93a3; font-size: 0.82rem; line-height: 1.5; margin-bottom: 14px;">High-performance interactive 3D web experience with CMS integration and motion graphics.</p>
+              <button type="button" class="dash-project-action-btn" style="width: 100%; text-align: center;" onclick="window.location.href='404.html'">Duplicate Scope Spec ↗</button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- VIEW TAB 4: TEAM & CAPACITY -->
@@ -632,6 +795,84 @@
             <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 65%; background:#8b5cf6;"></div></div>
           </div>
         </div>
+
+        <!-- Section 1: Studio Skill Coverage & Bandwidth Matrix -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-layer-group" style="color: #14b8a6; margin-right: 8px;"></i> Studio Skill &amp; Discipline Bandwidth</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Current utilization breakdown by core creative practice area.</p>
+            </div>
+            <span class="dash-badge-status badge-in-progress">Studio at 78% Load</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">Brand Identity &amp; Strategy</span>
+                <span style="color: #f4ab36; font-weight: 700;">88% (Near Cap)</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 88%;"></div></div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">UI/UX &amp; Design Systems</span>
+                <span style="color: #2dd4bf; font-weight: 700;">72% (Healthy)</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill dash-progress-fill-teal" style="width: 72%;"></div></div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">3D WebGL &amp; Motion Design</span>
+                <span style="color: #c084fc; font-weight: 700;">65% (Available)</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 65%; background: #8b5cf6;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Freelancer Talent Bench & Extended Network -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-user-plus" style="color: #f4ab36; margin-right: 8px;"></i> Vetted Contractor Bench &amp; Surge Talent</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Pre-approved senior specialists for immediate sprint scaling.</p>
+            </div>
+            <button type="button" class="dash-cta-btn" style="font-size: 0.8rem; padding: 7px 14px;" onclick="window.location.href='404.html'">+ Add Vetted Specialist</button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="dash-milestone-item" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+              <div style="display: flex; gap: 14px; align-items: center;">
+                <div class="dash-member-avatar" style="width: 42px; height: 42px; font-size: 0.95rem; background: #27272a;">SK</div>
+                <div>
+                  <div style="font-weight: 600; font-size: 0.92rem; color: #fff;">Soren Kristensen</div>
+                  <div style="color: #8c93a3; font-size: 0.8rem;">Senior Webflow / Three.js Engineer • $140/hr</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <span class="dash-badge-status badge-completed">Available Immediately</span>
+                <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Assign to Sprint</button>
+              </div>
+            </div>
+
+            <div class="dash-milestone-item" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+              <div style="display: flex; gap: 14px; align-items: center;">
+                <div class="dash-member-avatar" style="width: 42px; height: 42px; font-size: 0.95rem; background: #27272a;">AD</div>
+                <div>
+                  <div style="font-weight: 600; font-size: 0.92rem; color: #fff;">Amara Diallo</div>
+                  <div style="color: #8c93a3; font-size: 0.8rem;">Verbal Identity &amp; Executive Copywriter • $125/hr</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <span class="dash-badge-status badge-in-progress">Available Oct 05</span>
+                <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Assign to Sprint</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- VIEW TAB 5: FINANCIALS -->
@@ -690,6 +931,77 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <!-- Section 1: MRR Growth & Quarterly Revenue Targets -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-chart-simple" style="color: #f4ab36; margin-right: 8px;"></i> Studio MRR Growth &amp; Annual Run Rate</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Current financial trajectory across dedicated agency retainers.</p>
+            </div>
+            <span class="dash-badge-status badge-completed">+24% YoY Growth</span>
+          </div>
+
+          <div class="dash-stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 20px;">
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Monthly Recurring (MRR)</div>
+              <div class="dash-stat-value" style="color: #f4ab36;">$248,500</div>
+              <div class="dash-stat-foot"><span>12 Active Retainers</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Annual Run Rate (ARR)</div>
+              <div class="dash-stat-value" style="color: #fff;">$2.98M</div>
+              <div class="dash-stat-foot"><span>Target: $3.2M by Q4</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Gross Profit Margin</div>
+              <div class="dash-stat-value" style="color: #10b981;">74.2%</div>
+              <div class="dash-stat-foot"><span>+3.1% vs Q2</span></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-label">Average Retainer Size</div>
+              <div class="dash-stat-value" style="color: #2dd4bf;">$20,700</div>
+              <div class="dash-stat-foot"><span>Industry top tier</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Operating Expenses & Studio Overhead -->
+        <div class="dash-card" style="margin-top: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title"><i class="fa-solid fa-receipt" style="color: #14b8a6; margin-right: 8px;"></i> Studio Operating Overhead &amp; Expense Breakdown</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Monthly cost distribution supporting creative pods and digital infrastructure.</p>
+            </div>
+            <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Export P&amp;L Report</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">Talent Payroll &amp; Pods</span>
+                <span style="color: #fff; font-weight: 700;">$124,000 / mo</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 50%;"></div></div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">Software, GPU &amp; Cloud Tools</span>
+                <span style="color: #fff; font-weight: 700;">$18,400 / mo</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill dash-progress-fill-teal" style="width: 25%;"></div></div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                <span style="color: #94a3b8;">Studio Space &amp; Facilities</span>
+                <span style="color: #fff; font-weight: 700;">$22,500 / mo</span>
+              </div>
+              <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 32%; background: #8b5cf6;"></div></div>
+            </div>
           </div>
         </div>
       </section>

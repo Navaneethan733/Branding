@@ -108,6 +108,8 @@
             </button>
           </div>
 
+          <div id="loginError" class="auth-error-msg" style="display:none;" role="alert"></div>
+
           <div class="auth-row-between">
             <label class="auth-checkbox-label">
               <input type="checkbox" id="rememberMe" class="auth-checkbox">
@@ -163,47 +165,99 @@
     (function() {
       const signupEmail = localStorage.getItem('stackly_signup_email');
       if (signupEmail) {
-        const emailInput = document.getElementById('loginEmail');
-        if (emailInput) emailInput.value = signupEmail;
+        const el = document.getElementById('loginEmail');
+        if (el) el.value = signupEmail;
         localStorage.removeItem('stackly_signup_email');
       }
     })();
-    // Password toggle
-    const pwToggle = document.getElementById('loginPwToggle');
-    const pwInput = document.getElementById('loginPassword');
+
+    // Cache all elements once
+    const loginForm    = document.getElementById('loginForm');
+    const roleSelect   = document.getElementById('loginRole');
+    const emailInput   = document.getElementById('loginEmail');
+    const pwInput      = document.getElementById('loginPassword');
+    const pwToggle     = document.getElementById('loginPwToggle');
+    const errorDiv     = document.getElementById('loginError');
+
+    // Password visibility toggle
     if (pwToggle && pwInput) {
       pwToggle.addEventListener('click', () => {
         const isHidden = pwInput.type === 'password';
         pwInput.type = isHidden ? 'text' : 'password';
-        pwToggle.querySelector('.eye-open').style.display = isHidden ? 'none' : '';
+        pwToggle.querySelector('.eye-open').style.display  = isHidden ? 'none' : '';
         pwToggle.querySelector('.eye-closed').style.display = isHidden ? '' : 'none';
       });
     }
-    // Login form
-    const loginForm = document.getElementById('loginForm');
+
+    // Error helpers
+    function showLoginError(msg, targetInput) {
+      if (errorDiv) {
+        errorDiv.textContent = msg;
+        errorDiv.style.display = 'flex';
+      }
+      if (targetInput) {
+        targetInput.classList.add('is-invalid');
+        targetInput.focus();
+      }
+    }
+
+    function clearLoginError() {
+      if (errorDiv) {
+        errorDiv.textContent = '';
+        errorDiv.style.display = 'none';
+      }
+      roleSelect?.classList.remove('is-invalid');
+      emailInput?.classList.remove('is-invalid');
+      pwInput?.classList.remove('is-invalid');
+    }
+
+    // Clear errors as user interacts
+    roleSelect?.addEventListener('change', clearLoginError);
+    emailInput?.addEventListener('input',  clearLoginError);
+    pwInput?.addEventListener('input',     clearLoginError);
+
+    // Login form submit
     if (loginForm) {
       loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const role = document.getElementById('loginRole')?.value || 'user';
-        const email = document.getElementById('loginEmail')?.value.trim() || '';
-        // Persist user info for dashboards
+        clearLoginError();
+
+        const role     = roleSelect?.value || '';
+        const email    = emailInput?.value.trim() || '';
+        const password = pwInput?.value || '';
+
+        if (!role) {
+          showLoginError('Please select your role (User or Admin).', roleSelect);
+          return;
+        }
+        if (!email) {
+          showLoginError('Please enter your User ID or Email.', emailInput);
+          return;
+        }
+        if (!password) {
+          showLoginError('Please enter your password.', pwInput);
+          return;
+        }
+
+        // All fields valid — save session data and redirect
         localStorage.setItem('stackly_user_email', email);
-        localStorage.setItem('stackly_user_role', role);
+        localStorage.setItem('stackly_user_role',  role);
+
         const toast = document.getElementById('toastNotice');
         if (toast) {
           toast.querySelector('.toast-msg').textContent = 'Logged in! Redirecting to dashboard...';
           toast.classList.add('show');
         }
+
         setTimeout(() => {
-          if (role === 'admin') {
-            window.location.href = 'admin-dashboard.html';
-          } else {
-            window.location.href = 'user-dashboard.html';
-          }
+          window.location.href = (role === 'admin')
+            ? 'admin-dashboard.html'
+            : 'user-dashboard.html';
         }, 1000);
       });
     }
-    // OAuth buttons
+
+    // OAuth social buttons → 404 (demo)
     document.getElementById('googleLogin')?.addEventListener('click', (e) => {
       e.preventDefault();
       window.location.href = '404.html';

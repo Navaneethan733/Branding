@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -426,11 +427,15 @@
     <nav class="blog-pagination-section" aria-label="Blog Pagination">
       <div class="container">
         <div class="pagination-pills fade-up-element">
-          <button class="page-pill page-arrow" aria-label="Previous page" disabled>&larr;</button>
+          <button class="page-pill page-arrow" aria-label="Previous page" disabled>
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
           <button class="page-pill active" aria-current="page">1</button>
           <button class="page-pill">2</button>
           <button class="page-pill">3</button>
-          <button class="page-pill page-arrow" aria-label="Next page">&rarr;</button>
+          <button class="page-pill page-arrow" aria-label="Next page">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
         </div>
       </div>
     </nav>
@@ -450,17 +455,18 @@
           </p>
           <form id="newsletterForm" class="newsletter-box">
             <input type="email" placeholder="Your email" class="newsletter-input" required>
-            <button type="submit" class="newsletter-btn">Subscribe <span>&rarr;</span></button>
+            <button type="submit" class="newsletter-btn">Subscribe <i class="fa-solid fa-circle-arrow-right"></i></button>
           </form>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-col-title">Company</h4>
+          <h4 class="footer-col-title">Quick Links</h4>
           <ul class="footer-nav-list">
-            <li><a href="404.html">Approach</a></li>
-            <li><a href="404.html">Case studies</a></li>
-            <li><a href="404.html">About</a></li>
-            <li><a href="404.html">Blog</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
