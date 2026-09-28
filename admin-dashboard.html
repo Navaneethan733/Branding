@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Admin — Stackly Brand &amp; Creative Studio</title>
+  <meta name="description" content="Studio Operations, Client Pipeline, Team Roster and Revenue Analytics for Stackly.">
+  <meta name="theme-color" content="#111215">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dash-body">
+
+  <div class="dash-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar" id="dashSidebar">
+      <div class="dash-sidebar-header">
+        <a href="index.html" class="dash-logo-wrap" aria-label="Stackly Home">
+          <img src="images/logo.webp" alt="Stackly Logo" class="dash-logo-img">
+        </a>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="dash-badge">Studio Admin</span>
+          <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close menu">✕</button>
+        </div>
+      </div>
+
+      <nav class="dash-sidebar-nav">
+        <div class="dash-nav-section-title">Operations</div>
+        <button type="button" class="dash-nav-item active" data-tab="overview">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Studio Pulse</span>
+        </button>
+
+        <button type="button" class="dash-nav-item" data-tab="clients">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Client Accounts</span>
+          <span class="dash-nav-count">12</span>
+        </button>
+
+        <button type="button" class="dash-nav-item" data-tab="inquiries">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Inbound Leads</span>
+          <span class="dash-nav-count" style="background: rgba(244,171,54,0.25); color: #f4ab36;">5 New</span>
+        </button>
+
+        <button type="button" class="dash-nav-item" data-tab="team">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          <span>Team &amp; Capacity</span>
+        </button>
+
+        <button type="button" class="dash-nav-item" data-tab="financials">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          <span>Financials &amp; MRR</span>
+        </button>
+
+        <div class="dash-nav-section-title">Portals &amp; Views</div>
+        <a href="user-dashboard.html" class="dash-role-switch" title="Switch to Client View">
+          <span>👤 Switch to Client View</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+
+        <a href="index.html" class="dash-role-switch" title="Back to main website">
+          <span>🏠 Return to Website</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </nav>
+
+      <div class="dash-sidebar-footer">
+        <div class="dash-user-card">
+          <div class="dash-user-avatar" id="adminAvatarInitials">AR</div>
+          <div class="dash-user-meta">
+            <div class="dash-user-name" id="adminSidebarName">Alex Rivera</div>
+            <div class="dash-user-role">Studio Administrator</div>
+          </div>
+          <a href="login.html" title="Log out" style="color: #64748b; margin-left: auto;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MOBILE DRAWER BACKDROP -->
+    <div class="dash-sidebar-backdrop" id="dashSidebarBackdrop"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="dash-main">
+
+      <!-- TOP NAV BAR -->
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-mobile-toggle" id="dashMobileToggle" aria-label="Toggle Navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div class="dash-search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="adminDashSearch" placeholder="Search clients, retainers, staff...">
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <div class="dash-status-pill" style="margin-right: 4px;">
+            <span class="dash-status-indicator"></span>
+            <span>Studio Utilization: 87%</span>
+          </div>
+
+          <button type="button" class="dash-topbar-btn" id="adminNotifBtn" aria-label="Notifications" onclick="window.location.href='404.html'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="dash-notif-dot"></span>
+          </button>
+
+          <button type="button" class="dash-cta-btn" id="newProjectBtn" onclick="window.location.href='404.html'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <span>New Client Project</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- VIEW TAB 1: OVERVIEW / STUDIO PULSE -->
+      <section class="dash-content" id="tab-overview">
+
+        <!-- Welcome Banner -->
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Studio Operations Pulse ⚡</h1>
+            <p class="dash-greeting-sub">12 active client retainers • $148,500 MRR • 6 senior design pods deployed.</p>
+          </div>
+          <div class="dash-header-actions">
+            <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+              ↓ Export Monthly Report
+            </button>
+            <button type="button" class="dash-cta-btn" onclick="window.location.href='404.html'">
+              + Onboard Client
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards -->
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-glow"></div>
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Monthly Retainer Revenue</span>
+              <div class="dash-stat-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value">$148,500</div>
+            <div class="dash-stat-foot">
+              <span class="dash-trend-up">↑ +14.2%</span>
+              <span>vs previous month</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-glow dash-stat-glow-teal"></div>
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Active Client Retainers</span>
+              <div class="dash-stat-icon-wrap dash-stat-icon-teal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value">12 Accounts</div>
+            <div class="dash-stat-foot">
+              <span style="color:#2dd4bf; font-weight:700;">100% Retained</span>
+              <span>Average 8.4 mos tenure</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-glow dash-stat-glow-purple"></div>
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Inbound Inquiries</span>
+              <div class="dash-stat-icon-wrap dash-stat-icon-purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value">9 Qualified</div>
+            <div class="dash-stat-foot">
+              <span class="dash-trend-up">5 new today</span>
+              <span>$180k pipeline value</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-glow dash-stat-glow-blue"></div>
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Studio Capacity</span>
+              <div class="dash-stat-icon-wrap dash-stat-icon-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value">87% Load</div>
+            <div class="dash-stat-foot">
+              <span style="color:#60a5fa; font-weight:700;">2 pods open</span>
+              <span>Available for Oct onboarding</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 Column Section: Revenue Chart + Urgent Inbound Leads -->
+        <div class="dash-grid-2col">
+
+          <!-- Left: Revenue History & Studio Growth -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Studio Revenue Velocity (2024)
+              </h2>
+              <span style="color:#10b981; font-weight:700; font-size:0.84rem;">MRR Growth: +42% YTD</span>
+            </div>
+
+            <div class="dash-chart-container">
+              <div class="dash-chart-col">
+                <div class="dash-chart-bar-wrap">
+                  <div class="dash-chart-bar" style="height: 48%;" title="Apr: $72,000"></div>
+                </div>
+                <span class="dash-chart-month">Apr</span>
+              </div>
+              <div class="dash-chart-col">
+                <div class="dash-chart-bar-wrap">
+                  <div class="dash-chart-bar" style="height: 56%;" title="May: $84,000"></div>
+                </div>
+                <span class="dash-chart-month">May</span>
+              </div>
+              <div class="dash-chart-col">
+                <div class="dash-chart-bar-wrap">
+                  <div class="dash-chart-bar" style="height: 68%;" title="Jun: $102,000"></div>
+                </div>
+                <span class="dash-chart-month">Jun</span>
+              </div>
+              <div class="dash-chart-col">
+                <div class="dash-chart-bar-wrap">
+                  <div class="dash-chart-bar" style="height: 78%;" title="Jul: $118,000"></div>
+                </div>
+                <span class="dash-chart-month">Jul</span>
+              </div>
+              <div class="dash-chart-col">
+                <div class="dash-chart-bar-wrap">
+                  <div class="dash-chart-bar" style="height: 88%;" title="Aug: $132,000"></div>
+                </div>
+                <span class="dash-chart-month">Aug</span>
+              </div>
+              <div class="dash-chart-col">
+                <div class="dash-chart-bar-wrap">
+                  <div class="dash-chart-bar current" style="height: 98%;" title="Sep: $148,500"></div>
+                </div>
+                <span class="dash-chart-month" style="color:#2dd4bf; font-weight:800;">Sep</span>
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; font-size:0.82rem; color:#8c93a3; padding-top:4px;">
+              <span>Average Retainer: <strong>$18,500 / mo</strong></span>
+              <span>Churn Rate: <strong>0% (Q3)</strong></span>
+              <span>Next Invoicing Date: <strong>Oct 01</strong></span>
+            </div>
+          </div>
+
+          <!-- Right: Recent Inbound Inquiries -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></svg>
+                Inbound Inquiries
+              </h2>
+              <a href="#" class="dash-card-action" onclick="switchTab('inquiries'); return false;">View All (9) →</a>
+            </div>
+
+            <div class="dash-project-list">
+              <div class="dash-project-item" style="padding: 14px 16px;">
+                <div class="dash-project-info">
+                  <div class="dash-project-name" style="font-size: 0.92rem;">
+                    Solara Climate Corp
+                    <span class="dash-badge-status badge-kickoff">$35k/mo</span>
+                  </div>
+                  <div class="dash-project-desc" style="margin-bottom:0;">Total enterprise rebrand &amp; carbon accounting web design.</div>
+                </div>
+                <button type="button" class="dash-cta-btn" style="padding: 6px 12px; font-size: 0.76rem;" onclick="window.location.href='404.html'">
+                  Accept
+                </button>
+              </div>
+
+              <div class="dash-project-item" style="padding: 14px 16px;">
+                <div class="dash-project-info">
+                  <div class="dash-project-name" style="font-size: 0.92rem;">
+                    Kinetix Robotics
+                    <span class="dash-badge-status badge-review">$25k/mo</span>
+                  </div>
+                  <div class="dash-project-desc" style="margin-bottom:0;">Series B fundraise deck, 3D industrial render suite.</div>
+                </div>
+                <button type="button" class="dash-cta-btn" style="padding: 6px 12px; font-size: 0.76rem;" onclick="window.location.href='404.html'">
+                  Accept
+                </button>
+              </div>
+
+              <div class="dash-project-item" style="padding: 14px 16px;">
+                <div class="dash-project-info">
+                  <div class="dash-project-name" style="font-size: 0.92rem;">
+                    Verve Commerce
+                    <span class="dash-badge-status badge-in-progress">$18k/mo</span>
+                  </div>
+                  <div class="dash-project-desc" style="margin-bottom:0;">DTC storefront identity and design token system.</div>
+                </div>
+                <button type="button" class="dash-project-action-btn" style="padding: 6px 12px; font-size: 0.76rem;" onclick="window.location.href='404.html'">
+                  Schedule
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Full Table: Active Retainer Accounts -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h2 class="dash-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              Active Client Portfolio (12 Accounts)
+            </h2>
+            <div class="dash-filter-group">
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">All</button>
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Review</button>
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">In Sprint</button>
+            </div>
+          </div>
+
+          <div class="dash-table-wrap">
+            <table class="dash-table" id="accountsTable">
+              <thead>
+                <tr>
+                  <th>Client Account</th>
+                  <th>Monthly Retainer</th>
+                  <th>Current Sprint</th>
+                  <th>Design Lead</th>
+                  <th>Health Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="review">
+                  <td>
+                    <div class="dash-client-cell">
+                      <div class="dash-client-avatar" style="background:#0f766e; color:#2dd4bf;">AG</div>
+                      <div>
+                        <div style="font-weight:700;">Apex Global</div>
+                        <div style="font-size:0.78rem; color:#8c93a3;">Sarah Chen (VP Marketing)</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight:700; color:#f4ab36;">$25,000 / mo</td>
+                  <td>Sprint 4: Identity 2.0</td>
+                  <td>Elena Vance</td>
+                  <td><span class="dash-badge-status badge-review">Review Pending</span></td>
+                  <td>
+                    <a href="404.html" class="dash-project-action-btn" style="text-decoration:none;" title="View client portal">
+                      Open Portal ↗
+                    </a>
+                  </td>
+                </tr>
+
+                <tr data-status="progress">
+                  <td>
+                    <div class="dash-client-cell">
+                      <div class="dash-client-avatar" style="background:#7c2d12; color:#f97316;">FL</div>
+                      <div>
+                        <div style="font-weight:700;">Fielder Logistics</div>
+                        <div style="font-size:0.78rem; color:#8c93a3;">Mara Reyes (Head of Brand)</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight:700; color:#f4ab36;">$20,000 / mo</td>
+                  <td>Sprint 2: Fleet &amp; Web</td>
+                  <td>Marcus Cole</td>
+                  <td><span class="dash-badge-status badge-in-progress">On Track</span></td>
+                  <td>
+                    <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Manage</button>
+                  </td>
+                </tr>
+
+                <tr data-status="progress">
+                  <td>
+                    <div class="dash-client-cell">
+                      <div class="dash-client-avatar" style="background:#581c87; color:#c084fc;">HS</div>
+                      <div>
+                        <div style="font-weight:700;">HyperScale Cloud</div>
+                        <div style="font-size:0.78rem; color:#8c93a3;">David Vance (CTO)</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight:700; color:#f4ab36;">$30,000 / mo</td>
+                  <td>Sprint 6: Platform UI</td>
+                  <td>Tariq Reed</td>
+                  <td><span class="dash-badge-status badge-in-progress">On Track</span></td>
+                  <td>
+                    <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Manage</button>
+                  </td>
+                </tr>
+
+                <tr data-status="review">
+                  <td>
+                    <div class="dash-client-cell">
+                      <div class="dash-client-avatar" style="background:#1e3a8a; color:#60a5fa;">AF</div>
+                      <div>
+                        <div style="font-weight:700;">Anchor Freight</div>
+                        <div style="font-size:0.78rem; color:#8c93a3;">Owen Fields (Brand VP)</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight:700; color:#f4ab36;">$18,000 / mo</td>
+                  <td>Sprint 3: Global Repositioning</td>
+                  <td>Elena Vance</td>
+                  <td><span class="dash-badge-status badge-review">Review Pending</span></td>
+                  <td>
+                    <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Manage</button>
+                  </td>
+                </tr>
+
+                <tr data-status="completed">
+                  <td>
+                    <div class="dash-client-cell">
+                      <div class="dash-client-avatar" style="background:#064e3b; color:#34d399;">NH</div>
+                      <div>
+                        <div style="font-weight:700;">Nova Health Sciences</div>
+                        <div style="font-size:0.78rem; color:#8c93a3;">Dr. Liam Kelly</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="font-weight:700; color:#f4ab36;">$22,500 / mo</td>
+                  <td>Sprint 8: Clinical Brand</td>
+                  <td>Marcus Cole</td>
+                  <td><span class="dash-badge-status badge-completed">Delivered</span></td>
+                  <td>
+                    <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Manage</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- VIEW TAB 2: CLIENT ACCOUNTS -->
+      <section class="dash-content" id="tab-clients" style="display: none;">
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Client Accounts Portfolio</h1>
+            <p class="dash-greeting-sub">12 enterprise partners • 100% renewal rate over the last 3 quarters.</p>
+          </div>
+          <button type="button" class="dash-cta-btn" onclick="window.location.href='404.html'">
+            + Onboard New Account
+          </button>
+        </div>
+
+        <div class="dash-cards-grid">
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+              <div>
+                <h3 style="margin:0; font-size:1.15rem; color:#fff;">Apex Global</h3>
+                <span style="font-size:0.8rem; color:#8c93a3;">Brand Strategy &amp; Identity</span>
+              </div>
+              <span class="dash-badge-status badge-review">Sprint 4</span>
+            </div>
+            <div style="font-size:1.5rem; font-weight:800; color:var(--accent-gold); margin-bottom:12px;">$25,000 / mo</div>
+            <p style="color:#94a3b8; font-size:0.86rem; margin-bottom:16px;">Assigned Pod: Elena Vance (Lead), Tariq Reed (3D). Deliverables submitted for review.</p>
+            <div style="display:flex; gap:10px;">
+              <a href="404.html" class="dash-cta-btn" style="padding:7px 14px; font-size:0.8rem; text-decoration:none;">View Client Hub ↗</a>
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Send Invoice</button>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+              <div>
+                <h3 style="margin:0; font-size:1.15rem; color:#fff;">HyperScale Cloud</h3>
+                <span style="font-size:0.8rem; color:#8c93a3;">Digital Platform &amp; WebGL</span>
+              </div>
+              <span class="dash-badge-status badge-in-progress">Sprint 6</span>
+            </div>
+            <div style="font-size:1.5rem; font-weight:800; color:var(--accent-gold); margin-bottom:12px;">$30,000 / mo</div>
+            <p style="color:#94a3b8; font-size:0.86rem; margin-bottom:16px;">Assigned Pod: Tariq Reed (Lead), Alex Rivera. Interactive WebGL marketing site.</p>
+            <div style="display:flex; gap:10px;">
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Open Figma ↗</button>
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Send Invoice</button>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+              <div>
+                <h3 style="margin:0; font-size:1.15rem; color:#fff;">Fielder Logistics</h3>
+                <span style="font-size:0.8rem; color:#8c93a3;">Enterprise Rebrand</span>
+              </div>
+              <span class="dash-badge-status badge-in-progress">Sprint 2</span>
+            </div>
+            <div style="font-size:1.5rem; font-weight:800; color:var(--accent-gold); margin-bottom:12px;">$20,000 / mo</div>
+            <p style="color:#94a3b8; font-size:0.86rem; margin-bottom:16px;">Assigned Pod: Marcus Cole (Lead). Global supply chain visual architecture.</p>
+            <div style="display:flex; gap:10px;">
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Open Figma ↗</button>
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Send Invoice</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW TAB 3: INBOUND LEADS -->
+      <section class="dash-content" id="tab-inquiries" style="display: none;">
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Inbound Studio Inquiries</h1>
+            <p class="dash-greeting-sub">Leads submitted via Stackly Contact &amp; Start a Project forms.</p>
+          </div>
+          <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+            Export to HubSpot / CRM
+          </button>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Company / Contact</th>
+                  <th>Project Scope</th>
+                  <th>Budget</th>
+                  <th>Target Kickoff</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Solara Climate</strong>
+                    <div style="font-size:0.8rem; color:#8c93a3;">Julian Thorne (Founder) • julian@solaraclimate.com</div>
+                  </td>
+                  <td>Complete Rebrand, 3D interactive emissions tracker</td>
+                  <td style="color:#f4ab36; font-weight:700;">$35k / mo</td>
+                  <td>Oct 15, 2024</td>
+                  <td>
+                    <button type="button" class="dash-cta-btn" style="padding:6px 12px; font-size:0.78rem;" onclick="window.location.href='404.html'">Accept &amp; Kickoff</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Kinetix Robotics</strong>
+                    <div style="font-size:0.8rem; color:#8c93a3;">Nadia Chen (VP Growth) • nadia@kinetix.io</div>
+                  </td>
+                  <td>Series B pitch collateral, hardware 3D renders</td>
+                  <td style="color:#f4ab36; font-weight:700;">$25k / mo</td>
+                  <td>Immediate</td>
+                  <td>
+                    <button type="button" class="dash-cta-btn" style="padding:6px 12px; font-size:0.78rem;" onclick="window.location.href='404.html'">Accept &amp; Kickoff</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Verve E-Commerce</strong>
+                    <div style="font-size:0.8rem; color:#8c93a3;">Paul Miller (CMO) • paul@verve.shop</div>
+                  </td>
+                  <td>Modern Shopify storefront &amp; dynamic motion ads</td>
+                  <td style="color:#f4ab36; font-weight:700;">$18k / mo</td>
+                  <td>Nov 01, 2024</td>
+                  <td>
+                    <button type="button" class="dash-cta-btn" style="padding:6px 12px; font-size:0.78rem;" onclick="window.location.href='404.html'">Accept &amp; Kickoff</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW TAB 4: TEAM & CAPACITY -->
+      <section class="dash-content" id="tab-team" style="display: none;">
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Team Roster &amp; Workload</h1>
+            <p class="dash-greeting-sub">Studio talent allocation, current sprint load, and availability.</p>
+          </div>
+          <button type="button" class="dash-cta-btn" onclick="window.location.href='404.html'">
+            Auto-Balance Workload
+          </button>
+        </div>
+
+        <div class="dash-cards-grid">
+          <div class="dash-card">
+            <div style="display:flex; gap:14px; align-items:center; margin-bottom:14px;">
+              <div class="dash-member-avatar" style="background:linear-gradient(135deg,#f4ab36,#ea580c);">EV</div>
+              <div>
+                <h3 style="margin:0; font-size:1.05rem; color:#fff;">Elena Vance</h3>
+                <span style="font-size:0.8rem; color:#f4ab36;">Design Director</span>
+              </div>
+            </div>
+            <div style="margin-bottom:12px; font-size:0.85rem; color:#94a3b8;">
+              Active Accounts: <strong>Apex Global, Anchor Freight</strong>
+            </div>
+            <div class="dash-progress-top"><span>Capacity</span><span>90%</span></div>
+            <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 90%;"></div></div>
+          </div>
+
+          <div class="dash-card">
+            <div style="display:flex; gap:14px; align-items:center; margin-bottom:14px;">
+              <div class="dash-member-avatar" style="background:linear-gradient(135deg,#14b8a6,#0f766e);">MC</div>
+              <div>
+                <h3 style="margin:0; font-size:1.05rem; color:#fff;">Marcus Cole</h3>
+                <span style="font-size:0.8rem; color:#2dd4bf;">Senior Brand Strategist</span>
+              </div>
+            </div>
+            <div style="margin-bottom:12px; font-size:0.85rem; color:#94a3b8;">
+              Active Accounts: <strong>Fielder Logistics, Nova Health</strong>
+            </div>
+            <div class="dash-progress-top"><span>Capacity</span><span>75%</span></div>
+            <div class="dash-progress-bar"><div class="dash-progress-fill dash-progress-fill-teal" style="width: 75%;"></div></div>
+          </div>
+
+          <div class="dash-card">
+            <div style="display:flex; gap:14px; align-items:center; margin-bottom:14px;">
+              <div class="dash-member-avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">TR</div>
+              <div>
+                <h3 style="margin:0; font-size:1.05rem; color:#fff;">Tariq Reed</h3>
+                <span style="font-size:0.8rem; color:#c084fc;">3D &amp; Motion Lead</span>
+              </div>
+            </div>
+            <div style="margin-bottom:12px; font-size:0.85rem; color:#94a3b8;">
+              Active Accounts: <strong>HyperScale Cloud</strong>
+            </div>
+            <div class="dash-progress-top"><span>Capacity</span><span>65% (Available)</span></div>
+            <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 65%; background:#8b5cf6;"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW TAB 5: FINANCIALS -->
+      <section class="dash-content" id="tab-financials" style="display: none;">
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Financials &amp; Studio MRR</h1>
+            <p class="dash-greeting-sub">Recurring client billings, retainer health, and payment receivables.</p>
+          </div>
+          <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+            Sync Accounting ↗
+          </button>
+        </div>
+
+        <div class="dash-card" style="margin-bottom: 24px;">
+          <h2 class="dash-card-title" style="margin-bottom: 16px;">September 2024 Retainer Invoices</h2>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Client Account</th>
+                  <th>Invoice Number</th>
+                  <th>Amount</th>
+                  <th>Due Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Apex Global</strong></td>
+                  <td>#STK-2024-09</td>
+                  <td style="font-weight:700;">$25,000.00</td>
+                  <td>Sep 01, 2024</td>
+                  <td><span class="dash-badge-status badge-completed">Paid</span></td>
+                </tr>
+                <tr>
+                  <td><strong>HyperScale Cloud</strong></td>
+                  <td>#STK-2024-09B</td>
+                  <td style="font-weight:700;">$30,000.00</td>
+                  <td>Sep 01, 2024</td>
+                  <td><span class="dash-badge-status badge-completed">Paid</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Fielder Logistics</strong></td>
+                  <td>#STK-2024-09C</td>
+                  <td style="font-weight:700;">$20,000.00</td>
+                  <td>Sep 01, 2024</td>
+                  <td><span class="dash-badge-status badge-completed">Paid</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Nova Health Sciences</strong></td>
+                  <td>#STK-2024-09D</td>
+                  <td style="font-weight:700;">$22,500.00</td>
+                  <td>Sep 01, 2024</td>
+                  <td><span class="dash-badge-status badge-completed">Paid</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- NEW PROJECT MODAL -->
+  <div class="dash-modal-backdrop" id="projectModal">
+    <div class="dash-modal">
+      <div class="dash-modal-header">
+        <h3 class="dash-modal-title">Onboard New Client Project</h3>
+        <button type="button" class="dash-modal-close" onclick="window.location.href='404.html'">✕</button>
+      </div>
+      <div class="dash-modal-body">
+        <div class="dash-form-group">
+          <label class="dash-form-label">Client / Company Name</label>
+          <input type="text" id="newClientName" class="dash-form-input" placeholder="e.g. Apex Global or Solara Climate">
+        </div>
+        <div class="dash-form-group">
+          <label class="dash-form-label">Retainer Tier / Monthly Fee</label>
+          <select class="dash-form-select" id="newClientFee">
+            <option>$18,000 / month (Core Studio Pod)</option>
+            <option selected>$25,000 / month (Senior Pod + 3D/Motion)</option>
+            <option>$35,000 / month (Enterprise Retainer)</option>
+          </select>
+        </div>
+        <div class="dash-form-group">
+          <label class="dash-form-label">Assigned Design Director</label>
+          <select class="dash-form-select" id="newClientLead">
+            <option>Elena Vance (Design Director)</option>
+            <option>Marcus Cole (Senior Strategist)</option>
+            <option>Tariq Reed (3D &amp; Motion Lead)</option>
+          </select>
+        </div>
+        <div class="dash-form-group">
+          <label class="dash-form-label">Initial Sprint Focus</label>
+          <textarea class="dash-form-textarea" id="newClientScope" placeholder="Describe Sprint 1 deliverables (e.g. Brand Positioning Matrix, Design System)..."></textarea>
+        </div>
+      </div>
+      <div class="dash-modal-footer">
+        <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Cancel</button>
+        <button type="button" class="dash-cta-btn" onclick="window.location.href='404.html'">Create Account &amp; Kickoff</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="dash-toast" id="dashToast">
+    <svg class="dash-toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="dashToastMsg">Action completed successfully!</span>
+  </div>
+
+  <script>
+        // All action and feature buttons redirect to 404 page (except sidebar navigation tabs and mobile toggle)
+    document.addEventListener('click', function(e) {
+      const btn = e.target.closest('button, .dash-cta-btn, .dash-project-action-btn, .dash-asset-btn, .dash-member-slack, .dash-topbar-btn');
+      if (!btn) return;
+      if (btn.classList.contains('dash-nav-item') || btn.id === 'dashMobileToggle' || btn.id === 'dashSidebarClose') {
+        return;
+      }
+      e.preventDefault();
+      window.location.href = '404.html';
+    });
+
+    // Tab navigation
+    const navItems = document.querySelectorAll('.dash-nav-item');
+    const tabSections = {
+      overview: document.getElementById('tab-overview'),
+      clients: document.getElementById('tab-clients'),
+      inquiries: document.getElementById('tab-inquiries'),
+      team: document.getElementById('tab-team'),
+      financials: document.getElementById('tab-financials'),
+    };
+
+    function switchTab(targetTab) {
+      navItems.forEach(item => {
+        if (item.getAttribute('data-tab') === targetTab) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+      Object.keys(tabSections).forEach(tab => {
+        if (tabSections[tab]) {
+          tabSections[tab].style.display = (tab === targetTab) ? 'block' : 'none';
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.innerWidth <= 900) {
+        closeMobileSidebar();
+      }
+    }
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const tab = item.getAttribute('data-tab');
+        if (tab) switchTab(tab);
+      });
+    });
+
+    // Mobile sidebar toggle & backdrop
+    const mobileToggle = document.getElementById('dashMobileToggle');
+    const sidebar = document.getElementById('dashSidebar');
+    const sidebarClose = document.getElementById('dashSidebarClose');
+    const sidebarBackdrop = document.getElementById('dashSidebarBackdrop');
+
+    function openMobileSidebar() {
+      if (sidebar) sidebar.classList.add('open');
+      if (sidebarBackdrop) sidebarBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileSidebar() {
+      if (sidebar) sidebar.classList.remove('open');
+      if (sidebarBackdrop) sidebarBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (mobileToggle) mobileToggle.addEventListener('click', openMobileSidebar);
+    if (sidebarClose) sidebarClose.addEventListener('click', closeMobileSidebar);
+    if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeMobileSidebar);
+
+    // Toast
+    let toastTimeout;
+    function triggerToast(msg) {
+      const toast = document.getElementById('dashToast');
+      const text = document.getElementById('dashToastMsg');
+      if (!toast || !text) return;
+      text.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3200);
+    }
+
+    // Modal
+    const projectModal = document.getElementById('projectModal');
+    function openNewProjectModal() {
+      if (projectModal) projectModal.classList.add('open');
+    }
+    function closeNewProjectModal() {
+      if (projectModal) projectModal.classList.remove('open');
+    }
+
+    function submitNewProject() {
+      const name = document.getElementById('newClientName')?.value;
+      closeNewProjectModal();
+      triggerToast('Client account created for "' + (name || 'New Client') + '"! Inviting team...');
+      if (document.getElementById('newClientName')) document.getElementById('newClientName').value = '';
+    }
+
+    // Filter table
+    function filterTable(status) {
+      const rows = document.querySelectorAll('#accountsTable tbody tr');
+      rows.forEach(row => {
+        if (status === 'all') {
+          row.style.display = '';
+        } else {
+          const rowStatus = row.getAttribute('data-status');
+          row.style.display = (rowStatus === status) ? '' : 'none';
+        }
+      });
+      triggerToast('Filtered accounts: ' + status.toUpperCase());
+    }
+
+    // Search filter
+    const searchInput = document.getElementById('adminDashSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const rows = document.querySelectorAll('.dash-table tbody tr');
+        rows.forEach(r => {
+          const text = r.textContent.toLowerCase();
+          r.style.display = text.includes(query) ? '' : 'none';
+        });
+      });
+    }
+
+    // --- Populate profile from login ---
+    (function() {
+      const email = localStorage.getItem('stackly_user_email') || '';
+      if (!email) return;
+      const raw = email.split('@')[0];
+      const displayName = raw
+        .replace(/[._\-]/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+      const initials = displayName.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+      const nameEl = document.getElementById('adminSidebarName');
+      const avatarEl = document.getElementById('adminAvatarInitials');
+      if (nameEl) nameEl.textContent = displayName;
+      if (avatarEl) avatarEl.textContent = initials;
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Brand Strategy, Identity & Digital Experiences</title>
+  <meta name="description" content="Stackly designs the strategy, identity and digital experiences that let ambitious companies stand out and stay consistent. One studio, the whole brand stack.">
+  <meta name="theme-color" content="#111215">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stackly — Brand Strategy & Creative Studio">
+  <meta property="og:description" content="Every strong brand is built in layers. Stackly designs brand strategy, visual identities, and digital products.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       PRELOADER (Luxury Split-Curtain & SVG Radial Ring)
+       ========================================================================== -->
+  <div id="stackly-preloader" class="stackly-preloader" role="status" aria-label="Loading Stackly">
+    <div class="preloader-curtain preloader-curtain--top"></div>
+    <div class="preloader-curtain preloader-curtain--bottom"></div>
+
+    <div class="preloader-stage">
+      <!-- Top studio metadata bar -->
+      <div class="preloader-top-bar">
+        <span class="preloader-live-tag"><span class="preloader-live-dot"></span> STACKLY STUDIO</span>
+        <span class="preloader-system-tag">INITIALIZING EXPERIENCE</span>
+      </div>
+
+      <!-- Central Iconic Ring & Logo -->
+      <div class="preloader-center">
+        <div class="preloader-ring-wrap">
+          <div class="preloader-ring-glow"></div>
+          
+          <svg class="preloader-svg-ring" viewBox="0 0 160 160">
+            <circle class="ring-bg" cx="80" cy="80" r="72"></circle>
+            <circle class="ring-orbit" cx="80" cy="80" r="64"></circle>
+            <circle class="ring-progress" id="preloaderRingProgress" cx="80" cy="80" r="72"></circle>
+          </svg>
+
+          <div class="preloader-ring-logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+          </div>
+        </div>
+
+        <!-- Typography Counter -->
+        <div class="preloader-number-wrap">
+          <span class="preloader-count-val" id="preloaderCountVal">00</span><span class="preloader-percent-mark">%</span>
+        </div>
+
+        <!-- Micro Laser Track -->
+        <div class="preloader-line-track">
+          <div class="preloader-line-fill" id="preloaderLineFill"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="preloader-bottom-bar">
+        <span>BRAND STRATEGY &amp; DIGITAL IDENTITY</span>
+        <span>&copy; 2024 / ALL SYSTEMS READY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo-wrap" aria-label="Stackly Home">
+        <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-center-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost-dark">Login</a>
+        <a href="404.html" class="btn btn-primary nav-btn-pill">Start a project</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div class="hamburger-bars">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <!-- Close Button -->
+    <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link active">Home</a>
+      <a href="services.html" class="mobile-drawer-link">Services</a>
+      <a href="about.html" class="mobile-drawer-link">About</a>
+      <a href="blog.html" class="mobile-drawer-link">Blog</a>
+      <a href="contact.html" class="mobile-drawer-link">Contact</a>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Login</a>
+      <a href="404.html" class="btn btn-primary" style="width: 100%;">Start a project</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+
+      <!-- ── Background Slideshow ─────────────────────────────────────────── -->
+      <div class="hero-slideshow" aria-hidden="true">
+        <div class="hero-slide hero-slide--1">
+          <img src="images/hero Backgroung.webp" alt="">
+        </div>
+        <div class="hero-slide hero-slide--2">
+          <img src="images/hero bg2.webp" alt="">
+        </div>
+        <div class="hero-slide hero-slide--3">
+          <img src="images/hero bg3.webp" alt="">
+        </div>
+        <!-- Dark gradient overlay sits above all slides -->
+        <div class="hero-slide-overlay"></div>
+      </div>
+      <!-- ─────────────────────────────────────────────────────────────────── -->
+
+      <div class="hero-glow-ambient"></div>
+      <div class="container hero-grid">
+        
+        <!-- Left Column: Copy & CTAs -->
+        <div class="hero-content fade-up-element in-view">
+          <h1 class="hero-title">
+            Every strong<br>
+            brand<br>
+            is built in layers.
+          </h1>
+
+          <p class="hero-description">
+            Stackly designs the strategy, identity and digital experiences that let ambitious companies stand out and stay consistent. One studio, the whole brand stack.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="404.html" class="btn btn-primary">Start a project</a>
+            <a href="404.html" class="btn btn-secondary">See our work</a>
+          </div>
+
+          <!-- Hero Stats Row -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-value">120+</span>
+              <span class="stat-label">brands launched</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">45</span>
+              <span class="stat-label">strategists & designers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">4.9/5</span>
+              <span class="stat-label">Average client rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive 3D Stack -->
+        <div class="hero-visual-wrapper fade-up-element delay-2 in-view">
+          <div class="hero-layers-container" id="heroLayers">
+            <!-- Layer 4: Digital Experience -->
+            <div class="hero-layer-card layer-teal" data-layer="4">
+              <span class="layer-left-title">Digital Experience</span>
+              <span class="layer-right-meta">Web • Product • App</span>
+            </div>
+
+            <!-- Layer 3: Voice & Content -->
+            <div class="hero-layer-card layer-amber" data-layer="3">
+              <span class="layer-left-title">Voice & Content</span>
+              <span class="layer-right-meta">Copy • Social • Video</span>
+            </div>
+
+            <!-- Layer 2: Visual Identity -->
+            <div class="hero-layer-card layer-white" data-layer="2">
+              <span class="layer-left-title">Visual Identity</span>
+              <span class="layer-right-meta">Logo • Assets • Type</span>
+            </div>
+
+            <!-- Layer 1: Brand Strategy -->
+            <div class="hero-layer-card layer-dark" data-layer="1">
+              <span class="layer-left-title">Brand Strategy</span>
+              <span class="layer-right-meta">Positioning • Naming</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: FOUNDATION & WORK OUR WAY UP
+         ========================================================================== -->
+    <section class="section-foundation" id="services">
+      <div class="container">
+        
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            We start from the<br>
+            foundation and work our<br>
+            way up.
+          </h2>
+          <p class="section-subtitle">
+            No template brand kits. Every engagement is scoped, designed and refined around the brand in front of us.
+          </p>
+        </div>
+
+        <div class="foundation-grid">
+          <!-- Card 1 -->
+          <div class="foundation-card foundation-card-dark fade-up-element delay-1">
+            <span class="card-layer-tag">Layer 01</span>
+            <h3 class="card-title">Foundation</h3>
+            <p class="card-desc">
+              We audit market position, audiences and competitors before designing anything, so the brand is wired for where you're headed, not just where you are.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="foundation-card foundation-card-dark fade-up-element delay-2">
+            <span class="card-layer-tag">Layer 02</span>
+            <h3 class="card-title">Structure</h3>
+            <p class="card-desc">
+              Strategists and designers embed with your team to define, design and test the identity, voice and experience that carry the weight of the brand.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="foundation-card foundation-card-gold fade-up-element delay-3">
+            <span class="card-layer-tag">Layer 03</span>
+            <h3 class="card-title">Operation</h3>
+            <p class="card-desc">
+              We stay on to evolve and extend what we've built, so the brand holds together as the business — and ambition — keeps climbing.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: WHAT WORKING WITH US LOOKS LIKE
+         ========================================================================== -->
+    <section class="section-process" id="process">
+      <div class="container">
+        
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            What working with us<br>
+            looks like.
+          </h2>
+          <p class="section-subtitle">
+            Four stages, repeated as the brand grows — working hands-off into a void.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+          <!-- Step 01 -->
+          <div class="process-step fade-up-element delay-1">
+            <div class="step-number-circle">01</div>
+            <h3 class="step-title">Discover</h3>
+            <p class="step-text">
+              Tax credit mapping, audiences, category and the outcome that actually matters.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="process-step fade-up-element delay-2">
+            <div class="step-number-circle">02</div>
+            <h3 class="step-title">Define</h3>
+            <p class="step-text">
+              A concrete strategy and system, reviewed with your team before anything is designed.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="process-step fade-up-element delay-3">
+            <div class="step-number-circle">03</div>
+            <h3 class="step-title">Design</h3>
+            <p class="step-text">
+              Embedded delivery in two-week sprints, with real design work from week one.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="process-step fade-up-element delay-4">
+            <div class="step-number-circle">04</div>
+            <h3 class="step-title">Deliver</h3>
+            <p class="step-text">
+              Launch support, asset handoff and guidelines ensure that the brand is alive.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: RECENT BRANDS WE'VE STOOD UP
+         ========================================================================== -->
+    <section class="section-work" id="work">
+      <div class="container">
+        
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            Recent brands we've stood<br>
+            up.
+          </h2>
+          <p class="section-subtitle">
+            A sample of the identities, campaigns and digital experiences currently out in the world.
+          </p>
+        </div>
+
+        <div class="work-showcase-grid">
+          
+          <!-- Left Large Card (with Component 6 image) -->
+          <div class="case-card-featured fade-up-element delay-1">
+            <img src="images/Component 6.webp" alt="Freight brand strategy and creative design workstation" class="featured-img-bg">
+            <div class="featured-overlay"></div>
+            
+            <div class="featured-top-action">
+              <span class="arrow-circle-btn" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+            </div>
+
+            <div class="featured-content">
+              <div class="case-tag">Brand Strategy • Logistics</div>
+              <h3 class="case-title">Repositioning a freight brand for three new markets</h3>
+              <p class="case-desc">Grew brand recall 3.2× and unified messaging across three continents.</p>
+            </div>
+          </div>
+
+          <!-- Right Column: 2 Cards -->
+          <div class="work-cards-col">
+            
+            <!-- Card 2: Fintech -->
+            <div class="case-card-small case-card-teal fade-up-element delay-2">
+              <div class="case-card-header">
+                <div class="case-tag">Visual Identity • Fintech</div>
+                <span class="arrow-circle-btn" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <div class="case-card-bottom">
+                <h3 class="case-title">A visual identity built to scale across 12 products</h3>
+                <p class="case-desc">Consistent through three funding rounds and two acquisitions.</p>
+              </div>
+            </div>
+
+            <!-- Card 3: Retail -->
+            <div class="case-card-small case-card-amber fade-up-element delay-3">
+              <div class="case-card-header">
+                <div class="case-tag">Web & Digital Design • Retail</div>
+                <span class="arrow-circle-btn" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <div class="case-card-bottom">
+                <h3 class="case-title">A digital flagship for 800 stores</h3>
+                <p class="case-desc">Lifted online conversion 22% inside the first four quarters.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: STAT BANNER (YELLOW BAR)
+         ========================================================================== -->
+    <section class="section-stat-banner" aria-label="Key Performance Indicators">
+      <div class="container">
+        <div class="stat-banner-grid">
+          
+          <div class="banner-stat-item fade-up-element delay-1">
+            <span class="banner-stat-number">98%</span>
+            <span class="banner-stat-text">client retention past year one</span>
+          </div>
+
+          <div class="banner-stat-item fade-up-element delay-2">
+            <span class="banner-stat-number">3.2×</span>
+            <span class="banner-stat-text">average lift in brand recall post-launch</span>
+          </div>
+
+          <div class="banner-stat-item fade-up-element delay-3">
+            <span class="banner-stat-number">24/7</span>
+            <span class="banner-stat-text">asset support across every retainer</span>
+          </div>
+
+          <div class="banner-stat-item fade-up-element delay-4">
+            <span class="banner-stat-number">12</span>
+            <span class="banner-stat-text">countries with a Stackly-designed brand live</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: WHAT IT'S LIKE ONCE WE'RE EMBEDDED
+         ========================================================================== -->
+    <section class="section-embedded" id="testimonials">
+      <div class="container">
+        
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            What it's like once we're<br>
+            embedded.
+          </h2>
+          <p class="section-subtitle">
+            Never a card to bring it forward — these are the people who signed off on the work.
+          </p>
+        </div>
+
+        <!-- 3D Stacked Testimonials Carousel -->
+        <div class="testimonial-stack-wrapper fade-up-element delay-1">
+          
+          <!-- Card 1 (Active) -->
+          <div class="test-card card-active" data-index="0">
+            <div class="test-quote-icon">“</div>
+            <p class="test-body-text">
+              We came in for a logo and left with a genuine brand partner. The team writes guidelines like they expect someone else to use them — because they do.
+            </p>
+            <div class="test-author-row">
+              <div class="test-avatar-initials">DK</div>
+              <div class="test-author-info">
+                <span class="test-author-name">Daniel Klem</span>
+                <span class="test-author-role">Head of Brand, Northbound Range</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="test-card card-next" data-index="1">
+            <div class="test-quote-icon">“</div>
+            <p class="test-body-text">
+              Stackly overhauled our entire customer journey without breaking what worked. In 3 months, our demo requests spiked 42% with clean attribution.
+            </p>
+            <div class="test-author-row">
+              <img src="images/Component 18 (1).webp" alt="Elena Cho avatar" class="test-avatar-img">
+              <div class="test-author-info">
+                <span class="test-author-name">Elena Cho</span>
+                <span class="test-author-role">Co-founder & CEO, Fjordic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="test-card card-prev" data-index="2">
+            <div class="test-quote-icon">“</div>
+            <p class="test-body-text">
+              They don't deliver pretty slide decks and disappear. Stackly embedded directly into our Slack and Figma channels and delivered sprint by sprint.
+            </p>
+            <div class="test-author-row">
+              <img src="images/Gradient.webp" alt="Marcus Vance avatar" class="test-avatar-img">
+              <div class="test-author-info">
+                <span class="test-author-name">Marcus Vance</span>
+                <span class="test-author-role">VP Product & Design, Veloce Health</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Interactive Switcher Controls -->
+        <div class="test-controls-row fade-up-element delay-2">
+          <button class="test-nav-arrow test-btn-prev" aria-label="Previous testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          
+          <div class="test-dot active" data-index="0"></div>
+          <div class="test-dot" data-index="1"></div>
+          <div class="test-dot" data-index="2"></div>
+          
+          <button class="test-nav-arrow test-btn-next" aria-label="Next testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: QUICK WORD FROM TEAMS WE'VE WORKED WITH (6 REVIEWS)
+         ========================================================================== -->
+    <section class="section-reviews" id="reviews">
+      <div class="container">
+        
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            Quick word from teams<br>
+            we've worked with.
+          </h2>
+          <p class="section-subtitle">
+            Pulled from the platforms clients actually leave reviews on.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <!-- Review 1 -->
+          <div class="review-card fade-up-element delay-1">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Responsive from kickoff to launch. Our engagement rate jumped 35% in the first month post-launch.”
+            </p>
+            <div class="review-card-footer">
+              <span class="review-author-name">Priya M.</span>
+              <span class="review-pill-tag">Fintech</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card fade-up-element delay-2">
+            <div class="review-stars">★★★★<span class="star-dim">★</span></div>
+            <p class="review-quote">
+              “Great communication throughout. Occasionally slower on smaller ad-hoc requests but stronger core delivery.”
+            </p>
+            <div class="review-card-footer">
+              <span class="review-author-name">Marcus K.</span>
+              <span class="review-pill-tag">SaaS</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card fade-up-element delay-3">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Our design review time has dropped noticeably after they rebuilt our component system. Small changes stay small.”
+            </p>
+            <div class="review-card-footer">
+              <span class="review-author-name">David L.</span>
+              <span class="review-pill-tag">AI</span>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="review-card fade-up-element delay-1">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “They caught brand inconsistencies our last vendor missed in two years. Worth every penny.”
+            </p>
+            <div class="review-card-footer">
+              <span class="review-author-name">Simon R.</span>
+              <span class="review-pill-tag">D2C</span>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="review-card fade-up-element delay-2">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Stackly's team felt like an extension of our internal studio. Handoff docs were genuinely usable.”
+            </p>
+            <div class="review-card-footer">
+              <span class="review-author-name">Shane P.</span>
+              <span class="review-pill-tag">Retail</span>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="review-card fade-up-element delay-3">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Straightforward scope and no scope creep. They told us honestly when something wasn't needed.”
+            </p>
+            <div class="review-card-footer">
+              <span class="review-author-name">Hari R.</span>
+              <span class="review-pill-tag">Health</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: CONTACT FORM (LET'S BUILD YOUR NEXT LAYER)
+         ========================================================================== -->
+    <section class="section-contact" id="contact">
+      <div class="container">
+        
+        <div class="contact-layout-grid">
+          
+          <!-- Left Column -->
+          <div class="contact-left-col fade-up-element">
+            <span class="contact-badge">Get in touch</span>
+            <h2 class="section-title">
+              Let's build your<br>
+              next layer.
+            </h2>
+            <p class="contact-info-desc">
+              Tell us what you're running into and we'll come back with a point of view within two working days — not a sales deck.
+            </p>
+
+            <div class="contact-details-list">
+              <!-- Detail 1: Email -->
+              <div class="contact-detail-row">
+                <div class="contact-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-meta-label">Email us</div>
+                  <a href="mailto:hello@stackly.io" class="contact-meta-value">hello@stackly.io</a>
+                </div>
+              </div>
+
+              <!-- Detail 2: Call -->
+              <div class="contact-detail-row">
+                <div class="contact-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-meta-label">Call us</div>
+                  <a href="tel:+14155550142" class="contact-meta-value">+1 (415) 555-0142</a>
+                </div>
+              </div>
+
+              <!-- Detail 3: Studio -->
+              <div class="contact-detail-row">
+                <div class="contact-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-meta-label">Studio</div>
+                  <span class="contact-meta-value">Market station, Depot Mall, San Francisco</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Form -->
+          <div class="contact-form-wrapper fade-up-element delay-1">
+            <form id="contactForm" class="contact-form">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Jordan Blake" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="jordan@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType" class="form-label">Project type</label>
+                <select id="projectType" name="projectType" class="form-select">
+                  <option value="Brand strategy">Brand strategy</option>
+                  <option value="Visual Identity">Visual Identity</option>
+                  <option value="Web & Digital Design">Web & Digital Design</option>
+                  <option value="Full Brand Stack">Full Brand Stack</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="scope" class="form-label">What are you scoping for?</label>
+                <textarea id="scope" name="scope" class="form-textarea" placeholder="A short paragraph is plenty." rows="3" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit-btn">Send message</button>
+
+              <p class="form-disclaimer">
+                We respect your market, so this won't trigger a phone call or the team's sales pipeline.
+              </p>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 9: FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Left Brand & Newsletter -->
+        <div class="footer-brand-col">
+          <img src="images/logo.webp" alt="Stackly Logo" class="footer-brand-logo">
+          <p class="footer-bio-text">
+            Brand strategy, identity and digital design for companies that love surprises (the bad kind).
+          </p>
+          <form id="newsletterForm" class="newsletter-box">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">
+              Subscribe <span>&rarr;</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Col 2: Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Approach</a></li>
+            <li><a href="404.html">Case studies</a></li>
+            <li><a href="404.html">About</a></li>
+            <li><a href="404.html">Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Brand Strategy</a></li>
+            <li><a href="404.html">Visual Identity</a></li>
+            <li><a href="404.html">Web & Digital Design</a></li>
+            <li><a href="404.html">Brand Systems</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-info">
+            <a href="404.html">hello@stackly.io</a>
+            <a href="404.html">+1 (415) 555-0142</a>
+            <span>Market station, Depot Mall, San Francisco</span>
+          </div>
+          <div class="footer-social-row">
+            <a href="404.html" class="social-circle-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.8v8.4h-2.8v-8.4M7.86 6.54a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Dribbble">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+                <path d="M8.5 2.5c2.5 5.5 4.5 11 6.5 19"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Watermark Large Outline Typography -->
+      <div class="footer-watermark-wrap">
+        <span class="footer-watermark-text">STACKLY</span>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <span>&copy; 2024 Stackly Studio LLC. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="404.html">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span class="toast-msg">Message sent successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

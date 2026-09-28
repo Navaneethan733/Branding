@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account — Stackly Brand & Creative Studio</title>
+  <meta name="description" content="Create your Stackly account and get a senior strategist or designer assigned within 48 hours.">
+  <meta name="theme-color" content="#111215">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+  <!-- Main Auth Split (signup is REVERSED: form LEFT, brand RIGHT) -->
+  <main class="auth-split-layout auth-split-reverse">
+
+    <!-- LEFT: Sign-up Form Panel -->
+    <section class="auth-form-panel auth-form-panel-light" aria-label="Create your Stackly account">
+      <div class="auth-form-wrap">
+
+        <div class="auth-form-top">
+          <button type="button" class="auth-back-btn" onclick="if(window.history.length > 1){window.history.back();}else{window.location.href='index.html';}" aria-label="Go back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Go back</span>
+          </button>
+        </div>
+
+        <!-- Progress Steps -->
+        <div class="signup-steps" aria-label="Sign up progress">
+          <div class="signup-step-bar active" aria-label="Step 1"></div>
+          <div class="signup-step-bar" aria-label="Step 2"></div>
+          <div class="signup-step-bar" aria-label="Step 3"></div>
+        </div>
+        <p class="signup-step-label">Step 1 of 3</p>
+
+        <div class="auth-form-header">
+          <h1 class="auth-form-title">Create your account.</h1>
+          <p class="auth-form-sub">
+            Already have one? <a href="login.html" class="auth-link-accent">Log in</a>
+          </p>
+        </div>
+
+        <form id="signupForm" class="auth-form" novalidate>
+          <div class="auth-field">
+            <label for="signupName" class="sr-only">Full name</label>
+            <input type="text" id="signupName" class="auth-input auth-input-light" placeholder="Full name" autocomplete="name" required>
+          </div>
+
+          <div class="auth-field">
+            <label for="signupEmail" class="sr-only">Work email</label>
+            <input type="email" id="signupEmail" class="auth-input auth-input-light" placeholder="Work email" autocomplete="email" required>
+          </div>
+
+          <div class="auth-field auth-password-field">
+            <label for="signupPassword" class="sr-only">Password</label>
+            <input type="password" id="signupPassword" class="auth-input auth-input-light" placeholder="Password" autocomplete="new-password" required>
+            <button type="button" class="auth-pw-toggle auth-pw-toggle-light" id="signupPwToggle" aria-label="Toggle password visibility">
+              <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <svg class="eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
+          <p class="auth-input-hint">Use 8+ characters with a number and a symbol.</p>
+
+          <button type="submit" class="btn btn-primary auth-submit-btn signup-continue-btn">Continue</button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- RIGHT: Brand Value Panel (dark) -->
+    <aside class="auth-brand-panel auth-brand-panel-value">
+      <div class="auth-brand-glow auth-brand-glow-amber"></div>
+      <div class="auth-brand-glow auth-brand-glow-teal-br"></div>
+
+      <div class="auth-value-inner">
+        <!-- Logo mark -->
+        <div class="auth-brand-logo-mark">
+          <a href="index.html" aria-label="Stackly Home">
+            <img src="images/logo.webp" alt="Stackly" class="auth-brand-logo-img">
+          </a>
+        </div>
+
+        <!-- Benefit List -->
+        <div class="auth-benefits-block">
+          <h2 class="auth-benefits-title">What you get from day one.</h2>
+          <ul class="auth-benefits-list">
+            <li class="auth-benefit-item">
+              <span class="auth-benefit-check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              A senior strategist or designer assigned within 48 hours.
+            </li>
+            <li class="auth-benefit-item">
+              <span class="auth-benefit-check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              A creative audit of your current brand, no charge.
+            </li>
+            <li class="auth-benefit-item">
+              <span class="auth-benefit-check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              Direct Slack channel with the people doing the work.
+            </li>
+            <li class="auth-benefit-item">
+              <span class="auth-benefit-check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              No lock-in — month-to-month on every engagement.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="auth-brand-testimonial auth-brand-testimonial-value">
+          <blockquote class="auth-quote auth-quote-small">
+            "Signing up took five minutes. Having an actual designer on the call by Thursday was the surprising part."
+          </blockquote>
+          <cite class="auth-quote-author">Owen Fields — Head of Brand, Anchor Freight</cite>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span class="toast-msg">Account created! Welcome to Stackly.</span>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Password toggle
+    const pwToggle = document.getElementById('signupPwToggle');
+    const pwInput = document.getElementById('signupPassword');
+    if (pwToggle && pwInput) {
+      pwToggle.addEventListener('click', () => {
+        const isHidden = pwInput.type === 'password';
+        pwInput.type = isHidden ? 'text' : 'password';
+        pwToggle.querySelector('.eye-open').style.display = isHidden ? 'none' : '';
+        pwToggle.querySelector('.eye-closed').style.display = isHidden ? '' : 'none';
+      });
+    }
+    // Signup form
+    const signupForm = document.getElementById('signupForm');
+    if (signupForm) {
+      signupForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('signupName')?.value.trim() || '';
+        const email = document.getElementById('signupEmail')?.value.trim() || '';
+        // Save for login page awareness
+        localStorage.setItem('stackly_signup_name', name);
+        localStorage.setItem('stackly_signup_email', email);
+        const toast = document.getElementById('toastNotice');
+        if (toast) {
+          toast.querySelector('.toast-msg').textContent = 'Account created! Redirecting to login...';
+          toast.classList.add('show');
+        }
+        // Advance step indicator
+        const bars = document.querySelectorAll('.signup-step-bar');
+        const label = document.querySelector('.signup-step-label');
+        if (bars[1]) bars[1].classList.add('active');
+        if (label) label.textContent = 'Step 2 of 3';
+
+        setTimeout(() => {
+          window.location.href = 'login.html';
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+</html>

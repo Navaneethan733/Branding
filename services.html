@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Stackly Brand & Creative Studio</title>
+  <meta name="description" content="Engage Stackly for a single layer or the full identity — strategy, visual identity, digital design, brand systems, ongoing support and rebranding.">
+  <meta name="theme-color" content="#111215">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Services — Stackly Brand Studio">
+  <meta property="og:description" content="Six disciplines. One stack. Built to click together. Strategy, identity, digital experiences, and guidelines.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       PRELOADER (Luxury Split-Curtain & SVG Radial Ring)
+       ========================================================================== -->
+  <div id="stackly-preloader" class="stackly-preloader" role="status" aria-label="Loading Stackly">
+    <div class="preloader-curtain preloader-curtain--top"></div>
+    <div class="preloader-curtain preloader-curtain--bottom"></div>
+
+    <div class="preloader-stage">
+      <!-- Top studio metadata bar -->
+      <div class="preloader-top-bar">
+        <span class="preloader-live-tag"><span class="preloader-live-dot"></span> STACKLY STUDIO</span>
+        <span class="preloader-system-tag">INITIALIZING EXPERIENCE</span>
+      </div>
+
+      <!-- Central Iconic Ring & Logo -->
+      <div class="preloader-center">
+        <div class="preloader-ring-wrap">
+          <div class="preloader-ring-glow"></div>
+          
+          <svg class="preloader-svg-ring" viewBox="0 0 160 160">
+            <circle class="ring-bg" cx="80" cy="80" r="72"></circle>
+            <circle class="ring-orbit" cx="80" cy="80" r="64"></circle>
+            <circle class="ring-progress" id="preloaderRingProgress" cx="80" cy="80" r="72"></circle>
+          </svg>
+
+          <div class="preloader-ring-logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+          </div>
+        </div>
+
+        <!-- Typography Counter -->
+        <div class="preloader-number-wrap">
+          <span class="preloader-count-val" id="preloaderCountVal">00</span><span class="preloader-percent-mark">%</span>
+        </div>
+
+        <!-- Micro Laser Track -->
+        <div class="preloader-line-track">
+          <div class="preloader-line-fill" id="preloaderLineFill"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="preloader-bottom-bar">
+        <span>BRAND STRATEGY &amp; DIGITAL IDENTITY</span>
+        <span>&copy; 2024 / ALL SYSTEMS READY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo-wrap" aria-label="Stackly Home">
+        <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-center-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost-dark">Log in</a>
+        <a href="404.html" class="btn btn-primary nav-btn-pill">Start a project</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div class="hamburger-bars">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <!-- Close Button -->
+    <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link">Home</a>
+      <a href="services.html" class="mobile-drawer-link active">Services</a>
+      <a href="about.html" class="mobile-drawer-link">About</a>
+      <a href="blog.html" class="mobile-drawer-link">Blog</a>
+      <a href="contact.html" class="mobile-drawer-link">Contact</a>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
+      <a href="404.html" class="btn btn-primary" style="width: 100%;">Start a project</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: SIX DISCIPLINES
+         ========================================================================== -->
+    <section class="services-hero" id="services-hero">
+      <div class="hero-glow-ambient"></div>
+      <div class="container services-hero-grid">
+
+        <!-- Left: Text Content -->
+        <div class="services-hero-left">
+          <div class="breadcrumb fade-up-element in-view">
+            <a href="index.html">Home</a>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-active">Services</span>
+          </div>
+
+          <h1 class="hero-title fade-up-element delay-1 in-view">
+            Six disciplines. One stack.<br>
+            Built to click together.
+          </h1>
+
+          <p class="hero-description fade-up-element delay-2 in-view">
+            Engage Stackly for a single layer or the full identity &mdash; strategy, visual identity, digital design, brand systems, ongoing support and rebranding, all delivered by the same senior team.
+          </p>
+
+          <div class="hero-cta-group fade-up-element delay-3 in-view">
+            <a href="404.html" class="btn btn-primary">Book a scoping call</a>
+            <a href="404.html" class="btn btn-secondary">Compare engagement models</a>
+          </div>
+
+          <!-- Mini service pills -->
+          <div class="services-hero-pill-row fade-up-element delay-4 in-view">
+            <span class="svc-pill">Brand Strategy</span>
+            <span class="svc-pill">Visual Identity</span>
+            <span class="svc-pill">Web &amp; Digital</span>
+            <span class="svc-pill">Brand Systems</span>
+          </div>
+        </div>
+
+        <!-- Right: Hero Image -->
+        <div class="services-hero-right fade-up-element delay-2 in-view">
+          <div class="services-hero-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=85"
+              alt="Creative brand strategy team working on identity design system"
+              class="services-hero-img"
+              loading="eager"
+            >
+            <!-- Floating stat badge -->
+            <div class="hero-float-badge badge-tl">
+              <span class="badge-num">120+</span>
+              <span class="badge-label">Brands launched</span>
+            </div>
+            <!-- Floating result badge -->
+            <div class="hero-float-badge badge-br">
+              <span class="badge-icon">&#9650;</span>
+              <span class="badge-text">3.2&times; avg brand recall lift</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: EVERY LAYER OF THE STACK, COVERED (6 CHAMFERED CARDS)
+         ========================================================================== -->
+    <section class="section-foundation" id="disciplines">
+      <div class="container">
+        
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            Every layer of the stack,<br>
+            covered.
+          </h2>
+          <p class="section-subtitle">
+            Hover a card &mdash; this is where each engagement usually starts.
+          </p>
+        </div>
+
+        <div class="services-grid-6">
+          
+          <!-- Card 1: Brand Strategy -->
+          <div class="service-layer-card fade-up-element delay-1">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="7" x="3" y="3" rx="1"></rect>
+                <rect width="18" height="7" x="3" y="14" rx="1"></rect>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Brand Strategy</h3>
+            <p class="service-card-desc">
+              Positioning, naming and market research that give a brand a clear reason to exist.
+            </p>
+            <a href="404.html" class="service-card-price">
+              From $18k engagement &rarr;
+            </a>
+          </div>
+
+          <!-- Card 2: Visual Identity -->
+          <div class="service-layer-card fade-up-element delay-2">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l8 8-8 12L4 10l8-8z"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Visual Identity</h3>
+            <p class="service-card-desc">
+              Logos, color, type and systems, designed and documented by senior designers.
+            </p>
+            <a href="404.html" class="service-card-price">
+              From $24k engagement &rarr;
+            </a>
+          </div>
+
+          <!-- Card 3: Web & Digital Design -->
+          <div class="service-layer-card fade-up-element delay-3">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                <line x1="8" x2="16" y1="21" y2="21"></line>
+                <line x1="12" x2="12" y1="17" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Web & Digital Design</h3>
+            <p class="service-card-desc">
+              Websites and product interfaces that turn a brand system into something people use.
+            </p>
+            <a href="404.html" class="service-card-price">
+              From $30k engagement &rarr;
+            </a>
+          </div>
+
+          <!-- Card 4: Brand Systems & Guidelines -->
+          <div class="service-layer-card fade-up-element delay-1">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Brand Systems & Guidelines</h3>
+            <p class="service-card-desc">
+              Guidelines, templates and governance so growth doesn't consume consistency.
+            </p>
+            <a href="404.html" class="service-card-price">
+              From $15k engagement &rarr;
+            </a>
+          </div>
+
+          <!-- Card 5: Ongoing Brand Support -->
+          <div class="service-layer-card fade-up-element delay-2">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Ongoing Brand Support</h3>
+            <p class="service-card-desc">
+              Rolling design support and asset production, on-call when you need it.
+            </p>
+            <a href="404.html" class="service-card-price">
+              From $8k / month &rarr;
+            </a>
+          </div>
+
+          <!-- Card 6: Rebranding & Evolution -->
+          <div class="service-layer-card fade-up-element delay-3">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Rebranding & Evolution</h3>
+            <p class="service-card-desc">
+              Modernizing a stalled identity in-phase, without pausing the business.
+            </p>
+            <a href="404.html" class="service-card-price">
+              From $40k engagement &rarr;
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: WHAT'S ACTUALLY INCLUDED (INTERACTIVE TABS & ONLINE IMAGES)
+         ========================================================================== -->
+    <section class="section-included" id="included">
+      <div class="container">
+        
+        <span class="section-tag-gold fade-up-element">Look closer</span>
+        
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            What's actually included.
+          </h2>
+          <p class="section-subtitle">
+            Switch tabs to see deliverables for each discipline.
+          </p>
+        </div>
+
+        <!-- Horizontal Tabs Menu -->
+        <div class="tab-nav-bar fade-up-element">
+          <button class="tab-btn active" data-tab="tab-strategy">Brand Strategy</button>
+          <button class="tab-btn" data-tab="tab-identity">Visual Identity</button>
+          <button class="tab-btn" data-tab="tab-web">Web & Digital Design</button>
+          <button class="tab-btn" data-tab="tab-guidelines">Brand Systems & Guidelines</button>
+        </div>
+
+        <!-- Tab 1: Brand Strategy (Uses local yellow branding cards asset) -->
+        <div class="tab-content-panel active" id="tab-strategy">
+          <div class="tab-info-col">
+            <h3>Brand Strategy</h3>
+            <p>
+              We define positioning and narrative that hold up as much under scrutiny as it does under pressure.
+            </p>
+            <div class="deliverables-checklist">
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Market & competitor audit</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Positioning & messaging framework</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Naming & verbal identity</span>
+              </div>
+            </div>
+          </div>
+          <div class="tab-image-col">
+            <img src="images/Background+Border.webp" alt="Brand Strategy deliverables mockup" class="tab-display-img">
+          </div>
+        </div>
+
+        <!-- Tab 2: Visual Identity (Curated Online High-Res Image) -->
+        <div class="tab-content-panel" id="tab-identity">
+          <div class="tab-info-col">
+            <h3>Visual Identity</h3>
+            <p>
+              Logos, bespoke color theory, custom typography scales, and modular visual assets designed for lasting distinction.
+            </p>
+            <div class="deliverables-checklist">
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Primary logo, secondary lockups & favicon system</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Color palette, WCAG contrast grading & print swatches</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Custom typography pairings & web licensing roadmap</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Complete SVG, EPS, PNG vector master suites</span>
+              </div>
+            </div>
+          </div>
+          <div class="tab-image-col">
+            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1200&q=80" alt="Visual Identity stationery and branding system" class="tab-display-img">
+          </div>
+        </div>
+
+        <!-- Tab 3: Web & Digital Design (Curated Online High-Res Image) -->
+        <div class="tab-content-panel" id="tab-web">
+          <div class="tab-info-col">
+            <h3>Web & Digital Design</h3>
+            <p>
+              Responsive digital interfaces engineered for speed, conversion, and brand memorability across every device.
+            </p>
+            <div class="deliverables-checklist">
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>End-to-end responsive desktop & mobile Figma designs</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Design token architecture and reusable UI component kit</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Interactive motion prototypes and micro-animations</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Direct developer handoff documentation & asset packs</span>
+              </div>
+            </div>
+          </div>
+          <div class="tab-image-col">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80" alt="Modern web UI and digital experience design" class="tab-display-img">
+          </div>
+        </div>
+
+        <!-- Tab 4: Brand Systems & Guidelines (Curated Online High-Res Image) -->
+        <div class="tab-content-panel" id="tab-guidelines">
+          <div class="tab-info-col">
+            <h3>Brand Systems & Guidelines</h3>
+            <p>
+              Scalable guidelines and governance kits so marketing and product teams can build autonomously without drift.
+            </p>
+            <div class="deliverables-checklist">
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Cloud-hosted interactive digital brand guidelines portal</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Pre-built Keynote, PowerPoint, and Figma slide templates</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Social media asset kits for LinkedIn, X, Instagram</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-icon">&#10003;</span>
+                <span>Brand voice, editorial rubrics, and copy style guide</span>
+              </div>
+            </div>
+          </div>
+          <div class="tab-image-col">
+            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80" alt="Brand editorial guidelines and design governance manual" class="tab-display-img">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: PICK THE SHAPE THAT FITS (ENGAGEMENT MODELS)
+         ========================================================================== -->
+    <section class="section-models" id="models">
+      <div class="container">
+        
+        <span class="section-tag-teal fade-up-element">Engagement Models</span>
+
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            Pick the shape that fits.
+          </h2>
+          <p class="section-subtitle">
+            All three include the same senior team &mdash; just different commitment shapes.
+          </p>
+        </div>
+
+        <div class="models-grid-3">
+          
+          <!-- Model 1: Project-based -->
+          <div class="model-card fade-up-element delay-1">
+            <h3 class="model-title">Project-based</h3>
+            <span class="model-subtitle">Fixed scope & timeline</span>
+            
+            <div class="model-features-list">
+              <div class="model-feature-item">Defined deliverables</div>
+              <div class="model-feature-item">4–12 week timelines</div>
+              <div class="model-feature-item">Fixed price quoting</div>
+            </div>
+
+            <a href="404.html" class="btn btn-card-light">Get a quote</a>
+          </div>
+
+          <!-- Model 2: Embedded team (Featured with Amber Border & Badge) -->
+          <div class="model-card featured-model fade-up-element delay-2">
+            <span class="model-featured-badge">Most flexible</span>
+            
+            <h3 class="model-title">Embedded team</h3>
+            <span class="model-subtitle">Ongoing, flexible scope</span>
+            
+            <div class="model-features-list">
+              <div class="model-feature-item">Dedicated pool of specialists</div>
+              <div class="model-feature-item">Sprint-based delivery</div>
+              <div class="model-feature-item">Scale up or down monthly</div>
+            </div>
+
+            <a href="404.html" class="btn btn-primary">Talk to us</a>
+          </div>
+
+          <!-- Model 3: Retainer -->
+          <div class="model-card fade-up-element delay-3">
+            <h3 class="model-title">Retainer</h3>
+            <span class="model-subtitle">Priority design support</span>
+            
+            <div class="model-features-list">
+              <div class="model-feature-item">Rolling design requests</div>
+              <div class="model-feature-item">Monthly capacity block</div>
+              <div class="model-feature-item">Cancel anytime</div>
+            </div>
+
+            <a href="404.html" class="btn btn-card-light">Get a quote</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: FROM FIRST CALL TO FIRST SPRINT (SCOPING PROCESS)
+         ========================================================================== -->
+    <section class="section-scope-process" id="scope-process">
+      <div class="container">
+        
+        <span class="section-tag-teal fade-up-element">How we scope it</span>
+
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title">
+            From first call to first sprint.
+          </h2>
+          <p class="section-subtitle">
+            Usually two to three weeks, start to finish.
+          </p>
+        </div>
+
+        <div class="scope-timeline-grid">
+          
+          <!-- Step 01 -->
+          <div class="scope-step-item fade-up-element delay-1">
+            <div class="scope-step-num">01</div>
+            <h3 class="scope-step-title">Intro call</h3>
+            <p class="scope-step-desc">
+              30-minute fit: understand requirements, not pitch a package.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="scope-step-item fade-up-element delay-2">
+            <div class="scope-step-num">02</div>
+            <h3 class="scope-step-title">Creative audit</h3>
+            <p class="scope-step-desc">
+              We review existing brand assets and flag gaps before quoting anything.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="scope-step-item fade-up-element delay-3">
+            <div class="scope-step-num">03</div>
+            <h3 class="scope-step-title">Proposal</h3>
+            <p class="scope-step-desc">
+              Scope, team and pricing &mdash; reviewed the week after you call us.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="scope-step-item fade-up-element delay-4">
+            <div class="scope-step-num">04</div>
+            <h3 class="scope-step-title">Kickoff</h3>
+            <p class="scope-step-desc">
+              Team embedded, milestones set, first sprint underway.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: TOOLS & STACK TICKER
+         ========================================================================== -->
+    <section class="section-tools-band" aria-label="Tools and technologies">
+      <div class="container">
+        <p class="tools-eyebrow">TOOLS & STACK WE OPERATE WITH IN DAILY</p>
+      </div>
+      
+      <div class="tools-ticker-wrap">
+        <div class="tools-ticker-track">
+          <span class="tool-chip">Figma</span>
+          <span class="tool-chip">Adobe Creative Cloud</span>
+          <span class="tool-chip">Webflow</span>
+          <span class="tool-chip">Framer</span>
+          <span class="tool-chip">After Effects</span>
+          <span class="tool-chip">Cinema 4D</span>
+          <span class="tool-chip">Notion</span>
+          <span class="tool-chip">Blender</span>
+          <span class="tool-chip">Photoshop</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="tool-chip">Figma</span>
+          <span class="tool-chip">Adobe Creative Cloud</span>
+          <span class="tool-chip">Webflow</span>
+          <span class="tool-chip">Framer</span>
+          <span class="tool-chip">After Effects</span>
+          <span class="tool-chip">Cinema 4D</span>
+          <span class="tool-chip">Notion</span>
+          <span class="tool-chip">Blender</span>
+          <span class="tool-chip">Photoshop</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: BEFORE YOU REACH OUT (FAQ ACCORDION)
+         ========================================================================== -->
+    <section class="section-faq" id="faq">
+      <div class="container faq-container">
+        
+        <div class="faq-header fade-up-element">
+          <span class="section-tag-teal">Common questions</span>
+          <h2 class="section-title">Before you reach out.</h2>
+        </div>
+
+        <div class="faq-accordion-list fade-up-element delay-1">
+          
+          <!-- FAQ 1 (Active) -->
+          <div class="faq-item active">
+            <button class="faq-trigger" aria-expanded="true">
+              <span>How fast can we start?</span>
+              <span class="faq-toggle-icon">&#43;</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Most engagements kick off two to three weeks after the first call, once scope and team are confirmed.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Do you work with in-house teams?</span>
+              <span class="faq-toggle-icon">&#43;</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Yes. Over 60% of our engagements involve embedding alongside internal product, brand, or marketing teams to accelerate delivery and establish new systems.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What industries do you serve?</span>
+              <span class="faq-toggle-icon">&#43;</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                We specialize in technology, fintech, SaaS, AI, consumer products (D2C), healthcare, and premium modern retail.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can we change scope mid-project?</span>
+              <span class="faq-toggle-icon">&#43;</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                Absolutely. Because we work in two-week agile sprints, scopes can adapt as new insights emerge without triggering painful change requests.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: CTA BANNER (AMBER BAND)
+         ========================================================================== -->
+    <section class="section-services-cta" aria-label="Book a call banner">
+      <div class="container">
+        <div class="cta-banner-content fade-up-element">
+          <h2 class="cta-banner-heading">
+            Not sure which layer you need<br>
+            first? Let's find out on a call.
+          </h2>
+          <a href="404.html" class="btn btn-dark-pill">Book a scoping call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 9: FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Left Brand & Newsletter -->
+        <div class="footer-brand-col">
+          <img src="images/logo.webp" alt="Stackly Logo" class="footer-brand-logo">
+          <p class="footer-bio-text">
+            Brand strategy, identity and digital design for companies that love surprises (the bad kind).
+          </p>
+          <form id="newsletterForm" class="newsletter-box">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">
+              Subscribe <span>&rarr;</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Col 2: Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Approach</a></li>
+            <li><a href="404.html">Case studies</a></li>
+            <li><a href="404.html">About</a></li>
+            <li><a href="404.html">Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Brand Strategy</a></li>
+            <li><a href="404.html">Visual Identity</a></li>
+            <li><a href="404.html">Web & Digital Design</a></li>
+            <li><a href="404.html">Brand Systems</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-info">
+            <a href="404.html">hello@stackly.io</a>
+            <a href="404.html">+1 (415) 555-0142</a>
+            <span>Market station, Depot Mall, San Francisco</span>
+          </div>
+          <div class="footer-social-row">
+            <a href="404.html" class="social-circle-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.8v8.4h-2.8v-8.4M7.86 6.54a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Dribbble">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+                <path d="M8.5 2.5c2.5 5.5 4.5 11 6.5 19"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Watermark Large Outline Typography -->
+      <div class="footer-watermark-wrap">
+        <span class="footer-watermark-text">STACKLY</span>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <span>&copy; 2024 Stackly Studio LLC. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="404.html">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span class="toast-msg">Action confirmed!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

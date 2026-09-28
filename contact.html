@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Stackly Brand & Creative Studio</title>
+  <meta name="description" content="Tell us what you're running into. A person on the team replies within two working days — not a sales deck, not a drip campaign.">
+  <meta name="theme-color" content="#111215">
+  <meta property="og:title" content="Contact — Stackly Brand & Creative Studio">
+  <meta property="og:description" content="Tell us what you're running into. Reach Stackly directly.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       PRELOADER (Luxury Split-Curtain & SVG Radial Ring)
+       ========================================================================== -->
+  <div id="stackly-preloader" class="stackly-preloader" role="status" aria-label="Loading Stackly">
+    <div class="preloader-curtain preloader-curtain--top"></div>
+    <div class="preloader-curtain preloader-curtain--bottom"></div>
+
+    <div class="preloader-stage">
+      <!-- Top studio metadata bar -->
+      <div class="preloader-top-bar">
+        <span class="preloader-live-tag"><span class="preloader-live-dot"></span> STACKLY STUDIO</span>
+        <span class="preloader-system-tag">INITIALIZING EXPERIENCE</span>
+      </div>
+
+      <!-- Central Iconic Ring & Logo -->
+      <div class="preloader-center">
+        <div class="preloader-ring-wrap">
+          <div class="preloader-ring-glow"></div>
+          
+          <svg class="preloader-svg-ring" viewBox="0 0 160 160">
+            <circle class="ring-bg" cx="80" cy="80" r="72"></circle>
+            <circle class="ring-orbit" cx="80" cy="80" r="64"></circle>
+            <circle class="ring-progress" id="preloaderRingProgress" cx="80" cy="80" r="72"></circle>
+          </svg>
+
+          <div class="preloader-ring-logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+          </div>
+        </div>
+
+        <!-- Typography Counter -->
+        <div class="preloader-number-wrap">
+          <span class="preloader-count-val" id="preloaderCountVal">00</span><span class="preloader-percent-mark">%</span>
+        </div>
+
+        <!-- Micro Laser Track -->
+        <div class="preloader-line-track">
+          <div class="preloader-line-fill" id="preloaderLineFill"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="preloader-bottom-bar">
+        <span>BRAND STRATEGY &amp; DIGITAL IDENTITY</span>
+        <span>&copy; 2024 / ALL SYSTEMS READY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo-wrap" aria-label="Stackly Home">
+        <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-center-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost-dark">Log in</a>
+        <a href="404.html" class="btn btn-primary nav-btn-pill">Start a project</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div class="hamburger-bars">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <!-- Close Button -->
+    <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link">Home</a>
+      <a href="services.html" class="mobile-drawer-link">Services</a>
+      <a href="about.html" class="mobile-drawer-link">About</a>
+      <a href="blog.html" class="mobile-drawer-link">Blog</a>
+      <a href="contact.html" class="mobile-drawer-link active">Contact</a>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
+      <a href="404.html" class="btn btn-primary" style="width: 100%;">Start a project</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ====================================================================
+         SECTION 1: CONTACT HERO (DARK)
+         ==================================================================== -->
+    <section class="contact-hero" id="contactHero">
+      <div class="hero-glow-ambient"></div>
+      <div class="container contact-hero-inner">
+        <div class="breadcrumb fade-up-element in-view">
+          <a href="index.html">Home</a>
+          <span class="crumb-sep">/</span>
+          <span class="crumb-active">Contact</span>
+        </div>
+        <h1 class="contact-hero-title fade-up-element delay-1 in-view">
+          Tell us what you're running<br>into.
+        </h1>
+        <p class="contact-hero-subtitle fade-up-element delay-2 in-view">
+          A person on the team replies within two working days — not a sales deck, not a drip campaign.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: CONTACT FORM & DIRECT INFO (LIGHT)
+         ==================================================================== -->
+    <section class="contact-form-section" id="contactFormSection">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Left: Direct Info Card (Dark) -->
+          <div class="contact-info-card fade-up-element in-view">
+            <h2 class="contact-info-heading">Reach us directly</h2>
+            
+            <div class="contact-info-items">
+              <div class="contact-info-row">
+                <span class="info-row-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </span>
+                <div class="info-row-content">
+                  <span class="info-row-label">Email</span>
+                  <a href="mailto:hello@stackly.io" class="info-row-val">hello@stackly.io</a>
+                </div>
+              </div>
+
+              <div class="contact-info-row">
+                <span class="info-row-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <div class="info-row-content">
+                  <span class="info-row-label">Phone</span>
+                  <a href="tel:+14155550148" class="info-row-val">+1 (415) 555-0148</a>
+                </div>
+              </div>
+
+              <div class="contact-info-row">
+                <span class="info-row-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <div class="info-row-content">
+                  <span class="info-row-label">Studio</span>
+                  <span class="info-row-val">140 Harbor Way, San Francisco, CA</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-footer">
+              <span class="response-time-label">Response time</span>
+              <p class="response-time-val">Within two working days, every time.</p>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Form -->
+          <div class="contact-form-wrap fade-up-element delay-1 in-view">
+            <form id="contactPageForm" class="contact-page-form">
+              <div class="form-row-dual">
+                <div class="form-field">
+                  <label for="contactFullName" class="sr-only">Full name</label>
+                  <input type="text" id="contactFullName" class="contact-input" placeholder="Full name" required>
+                </div>
+                <div class="form-field">
+                  <label for="contactEmail" class="sr-only">Work email</label>
+                  <input type="email" id="contactEmail" class="contact-input" placeholder="Work email" required>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contactCompany" class="sr-only">Company</label>
+                <input type="text" id="contactCompany" class="contact-input" placeholder="Company">
+              </div>
+
+              <div class="form-field">
+                <label for="contactMessage" class="sr-only">What are you running into?</label>
+                <textarea id="contactMessage" class="contact-input contact-textarea" rows="6" placeholder="What are you running into?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary contact-submit-btn">
+                Send message
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: MAP WITH ADDRESS PIN STRIP
+         ==================================================================== -->
+    <section class="contact-map-section" aria-label="Studio Location Map">
+      <div class="map-address-banner">
+        <div class="container map-address-inner">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="map-pin-icon">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="map-address-text">10, Begur - Koppa Rd, Surakshaa Nagar, Yelenahalli, Akshayanagar, Bengaluru, Karnataka 560114, India</span>
+        </div>
+      </div>
+
+      <div class="map-embed-wrap">
+        <iframe
+          title="Stackly Studio Location Map"
+          class="map-iframe"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=77.6080%2C12.8700%2C77.6350%2C12.8900&amp;layer=mapnik&amp;marker=12.8805%2C77.6215"
+          loading="lazy">
+        </iframe>
+        <div class="map-custom-marker" aria-hidden="true">
+          <div class="marker-pulse"></div>
+          <div class="marker-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: THREE STUDIOS, ONE TEAM (LIGHT GRAY)
+         ==================================================================== -->
+    <section class="contact-studios-section" aria-label="Studio Hubs">
+      <div class="container">
+        
+        <div class="studios-header fade-up-element">
+          <div class="studios-header-left">
+            <span class="section-tag-teal">Where we work from</span>
+            <h2 class="studios-heading">Three studios, one team.</h2>
+          </div>
+          <span class="studios-note">Remote-first, with hubs where most clients are.</span>
+        </div>
+
+        <div class="studios-grid">
+
+          <!-- Bangalore -->
+          <div class="studio-card fade-up-element delay-1">
+            <span class="studio-badge">BLR</span>
+            <h3 class="studio-city">Bangalore</h3>
+            <p class="studio-address">140 Harbor Way, CA 94111 · HQ</p>
+          </div>
+
+          <!-- Hyderabad -->
+          <div class="studio-card fade-up-element delay-2">
+            <span class="studio-badge">HYD</span>
+            <h3 class="studio-city">Hyderabad</h3>
+            <p class="studio-address">88 Adelaide St W, ON M5H</p>
+          </div>
+
+          <!-- Chennai -->
+          <div class="studio-card fade-up-element delay-3">
+            <span class="studio-badge">CHN</span>
+            <h3 class="studio-city">Chennai</h3>
+            <p class="studio-address">Rua do Alecrim 34, 1200</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: GET SUPPORT FASTER (LIGHT)
+         ==================================================================== -->
+    <section class="contact-support-section" aria-label="Client Support Channels">
+      <div class="container">
+
+        <div class="support-header fade-up-element">
+          <div class="support-header-left">
+            <span class="section-tag-teal">Already a client?</span>
+            <h2 class="support-heading">Get support faster.</h2>
+          </div>
+          <span class="support-note">Pick whichever channel matches the urgency.</span>
+        </div>
+
+        <div class="support-cards-grid">
+
+          <!-- Live Chat -->
+          <div class="support-card fade-up-element delay-1">
+            <div class="support-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="support-card-title">Live chat</h3>
+            <p class="support-card-desc">Fastest for anything time-sensitive during business hours.</p>
+          </div>
+
+          <!-- Support Email -->
+          <div class="support-card fade-up-element delay-2">
+            <div class="support-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+              </svg>
+            </div>
+            <h3 class="support-card-title">Support email</h3>
+            <p class="support-card-desc"><a href="mailto:support@stackly.io">support@stackly.io</a> — replies within four business hours.</p>
+          </div>
+
+          <!-- Rush Requests -->
+          <div class="support-card fade-up-element delay-3">
+            <div class="support-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="support-card-title">Rush requests</h3>
+            <p class="support-card-desc">For retainer clients with a same-day deadline.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: QUICK ANSWERS (FAQ) (LIGHT GRAY)
+         ==================================================================== -->
+    <section class="contact-faq-section" id="faq" aria-label="Frequently Asked Questions">
+      <div class="container">
+        
+        <div class="faq-header-center fade-up-element">
+          <span class="section-tag-teal">Before you write in</span>
+          <h2 class="faq-center-heading">Quick answers.</h2>
+        </div>
+
+        <div class="faq-accordion-box fade-up-element delay-1">
+
+          <!-- FAQ 1 (Active by default) -->
+          <div class="faq-item active">
+            <button class="faq-trigger" aria-expanded="true">
+              <span class="faq-q-text">Do you take on smaller projects?</span>
+              <span class="faq-icon-cross"></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                <p>Yes, project-based engagements start around $15k depending on scope.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-q-text">What timezone is the team in?</span>
+              <span class="faq-icon-cross"></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                <p>Our core hours span UTC-8 to UTC+5:30, ensuring high overlap with clients across North America, Europe, and Asia.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-q-text">Can I speak to a reference client?</span>
+              <span class="faq-icon-cross"></span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-body-inner">
+                <p>Of course. Once we determine that we are a mutual fit, we gladly connect you directly with founders and leadership from our recent case studies.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 7: TESTIMONIAL BANNER (DARK)
+         ==================================================================== -->
+    <section class="contact-testimonial-section" aria-label="Client Feedback">
+      <div class="container">
+        <div class="contact-quote-wrapper fade-up-element">
+          <div class="quote-gold-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote class="contact-quote-text">
+            Stackly replied to our first email in under three hours, on a Saturday. That set the tone for the whole engagement.
+          </blockquote>
+          <cite class="contact-quote-author">Marc Reyes, VP Marketing — Fielder Logistics</cite>
+          
+          <div class="quote-dots-row" aria-hidden="true">
+            <span class="quote-dot active"></span>
+            <span class="quote-dot"></span>
+            <span class="quote-dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 8: PREFER TO JUST SEND AN EMAIL? (AMBER BANNER)
+         ==================================================================== -->
+    <section class="contact-email-banner" aria-label="Direct Email Callout">
+      <div class="container">
+        <div class="email-banner-inner fade-up-element">
+          <h2 class="email-banner-heading">Prefer to just send an email?</h2>
+          <a href="mailto:hello@stackly.io" class="btn btn-dark-pill email-direct-btn">
+            hello@stackly.io
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <img src="images/logo.webp" alt="Stackly Logo" class="footer-brand-logo">
+          <p class="footer-bio-text">
+            Brand strategy, identity and digital design for companies that have outgrown their last logo.
+          </p>
+          <form id="newsletterForm" class="newsletter-box">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">Subscribe <span>&rarr;</span></button>
+          </form>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Approach</a></li>
+            <li><a href="404.html">Case studies</a></li>
+            <li><a href="404.html">About</a></li>
+            <li><a href="404.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Brand Strategy</a></li>
+            <li><a href="404.html">Visual Identity</a></li>
+            <li><a href="404.html">Web & Digital Design</a></li>
+            <li><a href="404.html">Brand Systems</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-info">
+            <a href="404.html">hello@stackly.io</a>
+            <a href="404.html">+1 (415) 555-0148</a>
+            <span>140 Harbor Way, San Francisco, CA</span>
+          </div>
+          <div class="footer-social-row">
+            <a href="404.html" class="social-circle-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.8v8.4h-2.8v-8.4M7.86 6.54a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Dribbble">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+                <path d="M8.5 2.5c2.5 5.5 4.5 11 6.5 19"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-watermark-wrap">
+        <span class="footer-watermark-text">STACKLY</span>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2024 Stackly Creative Studio. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy</a>
+          <span>·</span>
+          <a href="404.html">Terms</a>
+          <span>·</span>
+          <a href="404.html">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notice -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span class="toast-msg">Message sent successfully! We'll reply within 2 working days.</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal — Stackly Creative Studio</title>
+  <meta name="description" content="Manage your creative deliverables, brand kit assets, and design sprints with Stackly.">
+  <meta name="theme-color" content="#111215">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dash-body">
+
+  <div class="dash-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar" id="dashSidebar">
+      <div class="dash-sidebar-header">
+        <a href="index.html" class="dash-logo-wrap" aria-label="Stackly Home">
+          <img src="images/logo.webp" alt="Stackly Logo" class="dash-logo-img">
+        </a>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="dash-badge dash-badge-user">Client Hub</span>
+          <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close menu">✕</button>
+        </div>
+      </div>
+
+      <nav class="dash-sidebar-nav">
+        <div class="dash-nav-section-title">Navigation</div>
+        <button type="button" class="dash-nav-item nav-user active" data-tab="overview">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Overview</span>
+        </button>
+
+        <button type="button" class="dash-nav-item nav-user" data-tab="projects">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          <span>Active Projects</span>
+          <span class="dash-nav-count">2</span>
+        </button>
+
+        <button type="button" class="dash-nav-item nav-user" data-tab="assets">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          <span>Brand Assets &amp; Kit</span>
+        </button>
+
+        <button type="button" class="dash-nav-item nav-user" data-tab="team">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Creative Team</span>
+        </button>
+
+        <button type="button" class="dash-nav-item nav-user" data-tab="billing">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          <span>Retainer &amp; Invoices</span>
+        </button>
+
+        <div class="dash-nav-section-title">Portals &amp; Views</div>
+        <a href="admin-dashboard.html" class="dash-role-switch" title="Switch to Admin Dashboard">
+          <span>⚡ Switch to Admin View</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+
+        <a href="index.html" class="dash-role-switch" title="Back to main website">
+          <span>🏠 Return to Website</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </nav>
+
+      <div class="dash-sidebar-footer">
+        <div class="dash-user-card">
+          <div class="dash-user-avatar avatar-teal" id="userAvatarInitials">SC</div>
+          <div class="dash-user-meta">
+            <div class="dash-user-name" id="userSidebarName">Sarah Chen</div>
+            <div class="dash-user-role">Client Portal</div>
+          </div>
+          <a href="login.html" title="Log out" style="color: #64748b; margin-left: auto;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MOBILE DRAWER BACKDROP -->
+    <div class="dash-sidebar-backdrop" id="dashSidebarBackdrop"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="dash-main">
+
+      <!-- TOP NAV BAR -->
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-mobile-toggle" id="dashMobileToggle" aria-label="Toggle Navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div class="dash-search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="userDashSearch" placeholder="Search deliverables, assets, files...">
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <div class="dash-status-pill" style="margin-right: 4px;">
+            <span class="dash-status-indicator"></span>
+            <span>Sprint #4: In Progress</span>
+          </div>
+
+          <button type="button" class="dash-topbar-btn" id="notifBtn" aria-label="Notifications" onclick="window.location.href='404.html'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="dash-notif-dot" style="background:#2dd4bf; box-shadow:0 0 8px #2dd4bf;"></span>
+          </button>
+
+          <button type="button" class="dash-cta-btn dash-cta-btn-teal" id="requestSprintBtn" onclick="window.location.href='404.html'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <span>Request Sprint</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- VIEW TAB 1: OVERVIEW (Default) -->
+      <section class="dash-content" id="tab-overview">
+
+        <!-- Welcome Banner -->
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title" id="userGreeting">Welcome back, Sarah 👋</h1>
+            <p class="dash-greeting-sub">Apex Global Brand Retainer • 3 deliverables submitted for review today.</p>
+          </div>
+          <div class="dash-header-actions">
+            <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+              ↓ Download Brand Kit
+            </button>
+            <button type="button" class="dash-cta-btn dash-cta-btn-teal" onclick="window.location.href='404.html'">
+              + New Scope Request
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards -->
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-glow dash-stat-glow-teal"></div>
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Active Sprints</span>
+              <div class="dash-stat-icon-wrap dash-stat-icon-teal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value">2 Projects</div>
+            <div class="dash-stat-foot">
+              <span class="dash-trend-up">● Sprint 4</span>
+              <span>Delivery due Friday</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-glow"></div>
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Pending Approval</span>
+              <div class="dash-stat-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value">3 Deliverables</div>
+            <div class="dash-stat-foot">
+              <span style="color:#f4ab36; font-weight:700;">Needs action</span>
+              <span>Homepage V3 &amp; Icon Set</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-glow dash-stat-glow-purple"></div>
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Brand Assets</span>
+              <div class="dash-stat-icon-wrap dash-stat-icon-purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value">148 Files</div>
+            <div class="dash-stat-foot">
+              <span class="dash-trend-up">+14 this week</span>
+              <span>SVGs, 3D Models, Guidelines</span>
+            </div>
+          </div>
+
+          <div class="dash-stat-card">
+            <div class="dash-stat-glow dash-stat-glow-blue"></div>
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Retainer Hours</span>
+              <div class="dash-stat-icon-wrap dash-stat-icon-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value">32 / 40 hrs</div>
+            <div class="dash-stat-foot">
+              <span style="color:#60a5fa; font-weight:700;">8 hrs remaining</span>
+              <span>Refreshes on Oct 1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 Column Section: Active Milestones + Assigned Studio Team -->
+        <div class="dash-grid-2col">
+
+          <!-- Left: Active Deliverables -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Current Sprint Deliverables
+              </h2>
+              <a href="#" class="dash-card-action" onclick="switchTab('projects'); return false;">View All Projects →</a>
+            </div>
+
+            <div class="dash-project-list">
+
+              <!-- Item 1 -->
+              <div class="dash-project-item">
+                <div class="dash-project-info">
+                  <div class="dash-project-name">
+                    Global Brand Identity 2.0
+                    <span class="dash-badge-status badge-in-progress">In Review</span>
+                  </div>
+                  <div class="dash-project-desc">Complete design token architecture, typography hierarchy &amp; 3D hero assets.</div>
+                  <div class="dash-progress-wrap">
+                    <div class="dash-progress-top">
+                      <span>Progress</span>
+                      <span>85%</span>
+                    </div>
+                    <div class="dash-progress-bar">
+                      <div class="dash-progress-fill dash-progress-fill-teal" style="width: 85%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dash-project-actions">
+                  <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+                    Figma V4 ↗
+                  </button>
+                  <button type="button" class="dash-cta-btn dash-cta-btn-teal" style="padding: 8px 14px; font-size: 0.8rem;" onclick="window.location.href='404.html'">
+                    ✓ Approve
+                  </button>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="dash-project-item">
+                <div class="dash-project-info">
+                  <div class="dash-project-name">
+                    Marketing Website Redesign
+                    <span class="dash-badge-status badge-kickoff">In Progress</span>
+                  </div>
+                  <div class="dash-project-desc">High-fidelity responsive UI pages, dynamic motion specs, interactive layer stacks.</div>
+                  <div class="dash-progress-wrap">
+                    <div class="dash-progress-top">
+                      <span>Progress</span>
+                      <span>60%</span>
+                    </div>
+                    <div class="dash-progress-bar">
+                      <div class="dash-progress-fill" style="width: 60%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dash-project-actions">
+                  <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+                    Preview ↗
+                  </button>
+                  <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+                    Notes (4)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="dash-project-item">
+                <div class="dash-project-info">
+                  <div class="dash-project-name">
+                    Product Design System &amp; Component Kit
+                    <span class="dash-badge-status badge-completed">Delivered</span>
+                  </div>
+                  <div class="dash-project-desc">42 modular components, dark/light theme tokens, Figma auto-layout library.</div>
+                  <div class="dash-progress-wrap">
+                    <div class="dash-progress-top">
+                      <span>Progress</span>
+                      <span>100%</span>
+                    </div>
+                    <div class="dash-progress-bar">
+                      <div class="dash-progress-fill" style="width: 100%; background: #10b981;"></div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+                  Download .fig
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Assigned Creative Team -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                Stackly Team On Call
+              </h2>
+            </div>
+
+            <div class="dash-team-list">
+              <div class="dash-team-member">
+                <div class="dash-member-avatar" style="background: linear-gradient(135deg,#f4ab36,#ea580c);">EV</div>
+                <div class="dash-member-info">
+                  <div class="dash-member-name">Elena Vance</div>
+                  <div class="dash-member-role">Design Director • Lead</div>
+                </div>
+                <button type="button" class="dash-member-slack" onclick="window.location.href='404.html'">Slack</button>
+              </div>
+
+              <div class="dash-team-member">
+                <div class="dash-member-avatar" style="background: linear-gradient(135deg,#14b8a6,#0f766e);">MC</div>
+                <div class="dash-member-info">
+                  <div class="dash-member-name">Marcus Cole</div>
+                  <div class="dash-member-role">Senior Brand Strategist</div>
+                </div>
+                <button type="button" class="dash-member-slack" onclick="window.location.href='404.html'">Slack</button>
+              </div>
+
+              <div class="dash-team-member">
+                <div class="dash-member-avatar" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9);">TR</div>
+                <div class="dash-member-info">
+                  <div class="dash-member-name">Tariq Reed</div>
+                  <div class="dash-member-role">3D &amp; Motion Lead</div>
+                </div>
+                <button type="button" class="dash-member-slack" onclick="window.location.href='404.html'">Slack</button>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; padding: 16px; background: rgba(20, 184, 166, 0.08); border: 1px solid rgba(20, 184, 166, 0.2); border-radius: 14px;">
+              <div style="font-size: 0.86rem; font-weight: 700; color: #2dd4bf; margin-bottom: 4px;">Weekly Sync Call</div>
+              <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 12px;">Thursday at 10:00 AM EST • Google Meet</div>
+              <button type="button" class="dash-project-action-btn" style="width: 100%; text-align: center;" onclick="window.location.href='404.html'">
+                Join Sync Room ↗
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Row: Quick Brand Kit & Activity Feed -->
+        <div class="dash-grid-2col">
+
+          <!-- Left: Quick Brand Kit Downloads -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Core Brand Kit Assets
+              </h2>
+              <a href="#" class="dash-card-action" onclick="switchTab('assets'); return false;">Asset Library (148) →</a>
+            </div>
+
+            <div class="dash-asset-grid">
+              <div class="dash-asset-card">
+                <div class="dash-asset-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <div>
+                  <div class="dash-asset-name">Logo Suite (All Formats)</div>
+                  <div class="dash-asset-meta">SVG, PNG, EPS, Monochrome</div>
+                </div>
+                <button type="button" class="dash-asset-btn" onclick="window.location.href='404.html'">
+                  ↓ Download .zip
+                </button>
+              </div>
+
+              <div class="dash-asset-card">
+                <div class="dash-asset-icon" style="background: rgba(20, 184, 166, 0.12); color: #2dd4bf;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <div>
+                  <div class="dash-asset-name">Brand Guidelines Book</div>
+                  <div class="dash-asset-meta">PDF • Version 2.4 • 64 Pages</div>
+                </div>
+                <button type="button" class="dash-asset-btn" onclick="window.location.href='404.html'">
+                  ↓ Download PDF
+                </button>
+              </div>
+
+              <div class="dash-asset-card">
+                <div class="dash-asset-icon" style="background: rgba(168, 85, 247, 0.12); color: #c084fc;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                </div>
+                <div>
+                  <div class="dash-asset-name">Color Palette &amp; Tokens</div>
+                  <div class="dash-asset-meta">CSS, JSON, ASE Swatches</div>
+                </div>
+                <button type="button" class="dash-asset-btn" onclick="window.location.href='404.html'">
+                  📋 Copy CSS Tokens
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Activity Stream -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h2 class="dash-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                Studio Activity
+              </h2>
+            </div>
+
+            <div class="dash-feed-list">
+              <div class="dash-feed-item">
+                <div class="dash-feed-dot dash-feed-dot-teal">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="dash-feed-content">
+                  <div class="dash-feed-text"><strong>Elena Vance</strong> pushed Homepage V3 designs to Figma.</div>
+                  <div class="dash-feed-time">24 minutes ago</div>
+                </div>
+              </div>
+
+              <div class="dash-feed-item">
+                <div class="dash-feed-dot">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+                <div class="dash-feed-content">
+                  <div class="dash-feed-text"><strong>Marcus Cole</strong> finalized Typography Guideline specs.</div>
+                  <div class="dash-feed-time">3 hours ago</div>
+                </div>
+              </div>
+
+              <div class="dash-feed-item">
+                <div class="dash-feed-dot" style="color: #60a5fa;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </div>
+                <div class="dash-feed-content">
+                  <div class="dash-feed-text"><strong>Tariq Reed</strong> uploaded 3D Brand Mark Renders (4K).</div>
+                  <div class="dash-feed-time">Yesterday at 4:15 PM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- VIEW TAB 2: ACTIVE PROJECTS -->
+      <section class="dash-content" id="tab-projects" style="display: none;">
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Active Projects &amp; Sprints</h1>
+            <p class="dash-greeting-sub">Track real-time sprint velocity, milestones, and deliverable handoffs.</p>
+          </div>
+          <button type="button" class="dash-cta-btn dash-cta-btn-teal" onclick="window.location.href='404.html'">
+            + Request New Scope
+          </button>
+        </div>
+
+        <div class="dash-card" style="margin-bottom: 24px;">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title">Project 1: Global Brand Identity 2.0</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Estimated completion: Oct 14, 2024 • 85% Complete</p>
+            </div>
+            <span class="dash-badge-status badge-in-progress">In Review</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+            <div class="dash-milestone-item">
+              <span style="font-weight: 600; font-size: 0.9rem;">✓ 1. Brand Strategy &amp; Core Positioning Matrix</span>
+              <span style="color: #10b981; font-size: 0.8rem; font-weight: 700;">Approved</span>
+            </div>
+            <div class="dash-milestone-item">
+              <span style="font-weight: 600; font-size: 0.9rem;">✓ 2. Logo Mark System (Primary, Compact, Monogram)</span>
+              <span style="color: #10b981; font-size: 0.8rem; font-weight: 700;">Approved</span>
+            </div>
+            <div class="dash-milestone-item">
+              <span style="font-weight: 600; font-size: 0.9rem;">⏳ 3. Color Token System &amp; Web Accessibility Contrast</span>
+              <button type="button" class="dash-cta-btn dash-cta-btn-teal" style="padding: 6px 12px; font-size: 0.78rem;" onclick="window.location.href='404.html'">Approve Milestone</button>
+            </div>
+            <div class="dash-milestone-item">
+              <span style="font-weight: 600; font-size: 0.9rem;">⏳ 4. Complete Brand Guidelines Manual (64-page PDF)</span>
+              <span style="color: #f4ab36; font-size: 0.8rem; font-weight: 700;">Final Review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title">Project 2: Marketing Web Experience &amp; CMS Design</h2>
+              <p style="color: #7b8292; font-size: 0.85rem; margin: 4px 0 0;">Estimated completion: Nov 02, 2024 • 60% Complete</p>
+            </div>
+            <span class="dash-badge-status badge-kickoff">In Progress</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+            <div class="dash-milestone-item">
+              <span style="font-weight: 600; font-size: 0.9rem;">✓ 1. Information Architecture &amp; User Journeys</span>
+              <span style="color: #10b981; font-size: 0.8rem; font-weight: 700;">Approved</span>
+            </div>
+            <div class="dash-milestone-item">
+              <span style="font-weight: 600; font-size: 0.9rem;">⏳ 2. Homepage &amp; Product Tour Wireframes (Desktop &amp; Mobile)</span>
+              <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Inspect Figma ↗</button>
+            </div>
+            <div class="dash-milestone-item">
+              <span style="font-weight: 600; font-size: 0.9rem;">○ 3. Interactive WebGL &amp; Layer Stack Motion Prototypes</span>
+              <span style="color: #64748b; font-size: 0.8rem; font-weight: 700;">Queued</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW TAB 3: BRAND ASSETS -->
+      <section class="dash-content" id="tab-assets" style="display: none;">
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Brand Asset Library</h1>
+            <p class="dash-greeting-sub">Direct access to approved vectors, design tokens, fonts, and collateral.</p>
+          </div>
+          <button type="button" class="dash-cta-btn dash-cta-btn-teal" onclick="window.location.href='404.html'">
+            ↓ Download Complete Kit (.ZIP)
+          </button>
+        </div>
+
+        <!-- Color Palette Quick Copy -->
+        <div class="dash-card" style="margin-bottom: 24px;">
+          <h2 class="dash-card-title" style="margin-bottom: 16px;">Core Brand Color Palette (Click to Copy HEX)</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px;">
+            <div onclick="window.location.href='404.html'" style="background:#0D0E12; border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:18px 14px; cursor:pointer;">
+              <div style="font-weight:700; font-size:0.85rem; color:#fff;">Obsidian</div>
+              <div style="font-size:0.75rem; color:#94a3b8;">#0D0E12</div>
+            </div>
+            <div onclick="window.location.href='404.html'" style="background:#F4AB36; border-radius:12px; padding:18px 14px; cursor:pointer;">
+              <div style="font-weight:700; font-size:0.85rem; color:#121316;">Apex Gold</div>
+              <div style="font-size:0.75rem; color:#451a03;">#F4AB36</div>
+            </div>
+            <div onclick="window.location.href='404.html'" style="background:#14B8A6; border-radius:12px; padding:18px 14px; cursor:pointer;">
+              <div style="font-weight:700; font-size:0.85rem; color:#fff;">Signal Teal</div>
+              <div style="font-size:0.75rem; color:#134e4a;">#14B8A6</div>
+            </div>
+            <div onclick="window.location.href='404.html'" style="background:#8B5CF6; border-radius:12px; padding:18px 14px; cursor:pointer;">
+              <div style="font-weight:700; font-size:0.85rem; color:#fff;">Iris Purple</div>
+              <div style="font-size:0.75rem; color:#312e81;">#8B5CF6</div>
+            </div>
+            <div onclick="window.location.href='404.html'" style="background:#FFFFFF; border-radius:12px; padding:18px 14px; cursor:pointer;">
+              <div style="font-weight:700; font-size:0.85rem; color:#121316;">Pure White</div>
+              <div style="font-size:0.75rem; color:#64748b;">#FFFFFF</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-asset-grid">
+          <div class="dash-asset-card">
+            <div class="dash-asset-icon">SVG</div>
+            <div class="dash-asset-name">Primary Horizontal Logo</div>
+            <div class="dash-asset-meta">Scalable Vector • Dark &amp; Light</div>
+            <button type="button" class="dash-asset-btn" onclick="window.location.href='404.html'">↓ Download SVG</button>
+          </div>
+          <div class="dash-asset-card">
+            <div class="dash-asset-icon">SVG</div>
+            <div class="dash-asset-name">Icon &amp; App Favicon Suite</div>
+            <div class="dash-asset-meta">16px, 32px, 192px, 512px PNG/SVG</div>
+            <button type="button" class="dash-asset-btn" onclick="window.location.href='404.html'">↓ Download ZIP</button>
+          </div>
+          <div class="dash-asset-card">
+            <div class="dash-asset-icon" style="color:#2dd4bf;">PDF</div>
+            <div class="dash-asset-name">Typography Licensing Spec</div>
+            <div class="dash-asset-meta">Plus Jakarta Sans &amp; Syne Spec</div>
+            <button type="button" class="dash-asset-btn" onclick="window.location.href='404.html'">↓ Download PDF</button>
+          </div>
+          <div class="dash-asset-card">
+            <div class="dash-asset-icon" style="color:#c084fc;">3D</div>
+            <div class="dash-asset-name">3D Hero Glass Shards (GLTF)</div>
+            <div class="dash-asset-meta">Three.js / WebGL Ready Models</div>
+            <button type="button" class="dash-asset-btn" onclick="window.location.href='404.html'">↓ Download GLTF</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW TAB 4: CREATIVE TEAM -->
+      <section class="dash-content" id="tab-team" style="display: none;">
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Your Dedicated Creative Pod</h1>
+            <p class="dash-greeting-sub">Senior strategists and art directors assigned directly to Apex Global.</p>
+          </div>
+          <button type="button" class="dash-cta-btn dash-cta-btn-teal" onclick="window.location.href='404.html'">
+            📅 Book 30-Min Strategy Call
+          </button>
+        </div>
+
+        <div class="dash-cards-grid">
+          <div class="dash-card">
+            <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+              <div class="dash-member-avatar" style="width:56px; height:56px; font-size:1.2rem; background:linear-gradient(135deg,#f4ab36,#ea580c);">EV</div>
+              <div>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #fff;">Elena Vance</h3>
+                <p style="margin: 2px 0 0; color: #f4ab36; font-size: 0.85rem; font-weight: 600;">Creative Director &amp; Partner</p>
+                <p style="margin: 2px 0 0; color: #64748b; font-size: 0.78rem;">New York, NY • In Office</p>
+              </div>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.86rem; line-height: 1.5; margin-bottom: 16px;">Overseeing total creative vision, brand hierarchy, and executive milestone reviews.</p>
+            <button type="button" class="dash-project-action-btn" style="width: 100%; text-align: center;" onclick="window.location.href='404.html'">
+              💬 Message Elena on Slack
+            </button>
+          </div>
+
+          <div class="dash-card">
+            <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+              <div class="dash-member-avatar" style="width:56px; height:56px; font-size:1.2rem; background:linear-gradient(135deg,#14b8a6,#0f766e);">MC</div>
+              <div>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #fff;">Marcus Cole</h3>
+                <p style="margin: 2px 0 0; color: #2dd4bf; font-size: 0.85rem; font-weight: 600;">Senior Brand Strategist</p>
+                <p style="margin: 2px 0 0; color: #64748b; font-size: 0.78rem;">London, UK • In Office</p>
+              </div>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.86rem; line-height: 1.5; margin-bottom: 16px;">Leading brand positioning matrix, verbal identity, and competitive differentiation.</p>
+            <button type="button" class="dash-project-action-btn" style="width: 100%; text-align: center;" onclick="window.location.href='404.html'">
+              💬 Message Marcus on Slack
+            </button>
+          </div>
+
+          <div class="dash-card">
+            <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+              <div class="dash-member-avatar" style="width:56px; height:56px; font-size:1.2rem; background:linear-gradient(135deg,#8b5cf6,#6d28d9);">TR</div>
+              <div>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #fff;">Tariq Reed</h3>
+                <p style="margin: 2px 0 0; color: #c084fc; font-size: 0.85rem; font-weight: 600;">3D &amp; Motion Lead</p>
+                <p style="margin: 2px 0 0; color: #64748b; font-size: 0.78rem;">San Francisco, CA • In Office</p>
+              </div>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.86rem; line-height: 1.5; margin-bottom: 16px;">Creating interactive WebGL shaders, kinetic typography, and product 3D assets.</p>
+            <button type="button" class="dash-project-action-btn" style="width: 100%; text-align: center;" onclick="window.location.href='404.html'">
+              💬 Message Tariq on Slack
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW TAB 5: BILLING & INVOICES -->
+      <section class="dash-content" id="tab-billing" style="display: none;">
+        <div class="dash-header-block">
+          <div>
+            <h1 class="dash-greeting-title">Retainer &amp; Billing History</h1>
+            <p class="dash-greeting-sub">Apex Global • Monthly Dedicated Creative Pod ($25,000 / month)</p>
+          </div>
+          <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">
+            Manage Payment Method ↗
+          </button>
+        </div>
+
+        <div class="dash-card" style="margin-bottom: 24px;">
+          <h2 class="dash-card-title" style="margin-bottom: 16px;">Past Invoices &amp; Receipts</h2>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Billing Period</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Receipt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight:700;">#STK-2024-09</td>
+                  <td>Sep 01 – Sep 30, 2024</td>
+                  <td>$25,000.00</td>
+                  <td><span class="dash-badge-status badge-completed">Paid</span></td>
+                  <td><button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Download PDF</button></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:700;">#STK-2024-08</td>
+                  <td>Aug 01 – Aug 31, 2024</td>
+                  <td>$25,000.00</td>
+                  <td><span class="dash-badge-status badge-completed">Paid</span></td>
+                  <td><button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Download PDF</button></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:700;">#STK-2024-07</td>
+                  <td>Jul 01 – Jul 31, 2024</td>
+                  <td>$25,000.00</td>
+                  <td><span class="dash-badge-status badge-completed">Paid</span></td>
+                  <td><button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Download PDF</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- SPRINT REQUEST MODAL -->
+  <div class="dash-modal-backdrop" id="sprintModal">
+    <div class="dash-modal">
+      <div class="dash-modal-header">
+        <h3 class="dash-modal-title">Request Design Sprint / Scope</h3>
+        <button type="button" class="dash-modal-close" onclick="window.location.href='404.html'">✕</button>
+      </div>
+      <div class="dash-modal-body">
+        <div class="dash-form-group">
+          <label class="dash-form-label">Sprint Objective / Deliverable Name</label>
+          <input type="text" id="sprintTitle" class="dash-form-input" placeholder="e.g. Investor Deck Template or App Icon Redesign">
+        </div>
+        <div class="dash-form-group">
+          <label class="dash-form-label">Category</label>
+          <select class="dash-form-select" id="sprintCategory">
+            <option>Brand Identity &amp; System</option>
+            <option>Marketing Website Page</option>
+            <option>3D &amp; Motion Asset</option>
+            <option>Packaging &amp; Physical Collateral</option>
+          </select>
+        </div>
+        <div class="dash-form-group">
+          <label class="dash-form-label">Brief &amp; Context</label>
+          <textarea class="dash-form-textarea" id="sprintDetails" placeholder="Describe the goal, target audience, and any reference links..."></textarea>
+        </div>
+      </div>
+      <div class="dash-modal-footer">
+        <button type="button" class="dash-project-action-btn" onclick="window.location.href='404.html'">Cancel</button>
+        <button type="button" class="dash-cta-btn dash-cta-btn-teal" onclick="window.location.href='404.html'">Submit Request</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="dash-toast" id="dashToast">
+    <svg class="dash-toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="dashToastMsg">Action completed successfully!</span>
+  </div>
+
+  <script>
+        // All action and feature buttons redirect to 404 page (except sidebar navigation tabs and mobile toggle)
+    document.addEventListener('click', function(e) {
+      const btn = e.target.closest('button, .dash-cta-btn, .dash-project-action-btn, .dash-asset-btn, .dash-member-slack, .dash-topbar-btn');
+      if (!btn) return;
+      if (btn.classList.contains('dash-nav-item') || btn.id === 'dashMobileToggle' || btn.id === 'dashSidebarClose') {
+        return;
+      }
+      e.preventDefault();
+      window.location.href = '404.html';
+    });
+
+    // Tab switching
+    const navItems = document.querySelectorAll('.dash-nav-item');
+    const tabSections = {
+      overview: document.getElementById('tab-overview'),
+      projects: document.getElementById('tab-projects'),
+      assets: document.getElementById('tab-assets'),
+      team: document.getElementById('tab-team'),
+      billing: document.getElementById('tab-billing'),
+    };
+
+    function switchTab(targetTab) {
+      navItems.forEach(item => {
+        if (item.getAttribute('data-tab') === targetTab) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+      Object.keys(tabSections).forEach(tab => {
+        if (tabSections[tab]) {
+          tabSections[tab].style.display = (tab === targetTab) ? 'block' : 'none';
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.innerWidth <= 900) {
+        closeMobileSidebar();
+      }
+    }
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const tab = item.getAttribute('data-tab');
+        if (tab) switchTab(tab);
+      });
+    });
+
+    // Mobile sidebar toggle & backdrop
+    const mobileToggle = document.getElementById('dashMobileToggle');
+    const sidebar = document.getElementById('dashSidebar');
+    const sidebarClose = document.getElementById('dashSidebarClose');
+    const sidebarBackdrop = document.getElementById('dashSidebarBackdrop');
+
+    function openMobileSidebar() {
+      if (sidebar) sidebar.classList.add('open');
+      if (sidebarBackdrop) sidebarBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileSidebar() {
+      if (sidebar) sidebar.classList.remove('open');
+      if (sidebarBackdrop) sidebarBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (mobileToggle) mobileToggle.addEventListener('click', openMobileSidebar);
+    if (sidebarClose) sidebarClose.addEventListener('click', closeMobileSidebar);
+    if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeMobileSidebar);
+
+    // Toast
+    let toastTimeout;
+    function triggerToast(msg) {
+      const toast = document.getElementById('dashToast');
+      const text = document.getElementById('dashToastMsg');
+      if (!toast || !text) return;
+      text.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3200);
+    }
+
+    function approveDeliverable(btn) {
+      btn.textContent = '✓ Approved!';
+      btn.style.background = '#10b981';
+      btn.style.color = '#ffffff';
+      btn.disabled = true;
+      triggerToast('Milestone approved! Notified Elena Vance and team.');
+    }
+
+    function copyHexTokens() {
+      navigator.clipboard?.writeText(':root { --apex-obsidian: #0D0E12; --apex-gold: #F4AB36; --apex-teal: #14B8A6; --apex-purple: #8B5CF6; }');
+      triggerToast('CSS Design Tokens copied to clipboard!');
+    }
+
+    function copyText(val, name) {
+      navigator.clipboard?.writeText(val);
+      triggerToast(name + ' (' + val + ') copied to clipboard!');
+    }
+
+    // Modal
+    const sprintModal = document.getElementById('sprintModal');
+    const requestBtn = document.getElementById('requestSprintBtn');
+    function openSprintModal() {
+      if (sprintModal) sprintModal.classList.add('open');
+    }
+    function closeSprintModal() {
+      if (sprintModal) sprintModal.classList.remove('open');
+    }
+    // requestBtn redirects directly to 404.html
+    // if (requestBtn) requestBtn.addEventListener('click', openSprintModal);
+
+    function submitSprint() {
+      const title = document.getElementById('sprintTitle')?.value;
+      closeSprintModal();
+      triggerToast('Sprint request submitted for "' + (title || 'New Deliverable') + '"!');
+      if (document.getElementById('sprintTitle')) document.getElementById('sprintTitle').value = '';
+    }
+
+    // Search filter
+    const searchInput = document.getElementById('userDashSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const items = document.querySelectorAll('.dash-project-item, .dash-asset-card');
+        items.forEach(el => {
+          const text = el.textContent.toLowerCase();
+          el.style.display = text.includes(query) ? '' : 'none';
+        });
+      });
+    }
+
+    // --- Populate profile from login ---
+    (function() {
+      const email = localStorage.getItem('stackly_user_email') || '';
+      if (!email) return;
+      // Derive display name from email (part before @)
+      const raw = email.split('@')[0];
+      const displayName = raw
+        .replace(/[._\-]/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+      const initials = displayName.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+      const nameEl = document.getElementById('userSidebarName');
+      const avatarEl = document.getElementById('userAvatarInitials');
+      const greetingEl = document.getElementById('userGreeting');
+      const firstName = displayName.split(' ')[0];
+      if (nameEl) nameEl.textContent = displayName;
+      if (avatarEl) avatarEl.textContent = initials;
+      if (greetingEl) greetingEl.textContent = 'Welcome back, ' + firstName + ' \uD83D\uDC4B';
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Stackly Brand & Creative Studio</title>
+  <meta name="description" content="We started Stackly because most creative agencies stop at the layer they're paid for. Ten years, one layer at a time.">
+  <meta name="theme-color" content="#111215">
+  <meta property="og:title" content="About — Stackly Brand Studio">
+  <meta property="og:description" content="Ten years, one layer at a time. The story behind Stackly.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       PRELOADER (Luxury Split-Curtain & SVG Radial Ring)
+       ========================================================================== -->
+  <div id="stackly-preloader" class="stackly-preloader" role="status" aria-label="Loading Stackly">
+    <div class="preloader-curtain preloader-curtain--top"></div>
+    <div class="preloader-curtain preloader-curtain--bottom"></div>
+
+    <div class="preloader-stage">
+      <!-- Top studio metadata bar -->
+      <div class="preloader-top-bar">
+        <span class="preloader-live-tag"><span class="preloader-live-dot"></span> STACKLY STUDIO</span>
+        <span class="preloader-system-tag">INITIALIZING EXPERIENCE</span>
+      </div>
+
+      <!-- Central Iconic Ring & Logo -->
+      <div class="preloader-center">
+        <div class="preloader-ring-wrap">
+          <div class="preloader-ring-glow"></div>
+          
+          <svg class="preloader-svg-ring" viewBox="0 0 160 160">
+            <circle class="ring-bg" cx="80" cy="80" r="72"></circle>
+            <circle class="ring-orbit" cx="80" cy="80" r="64"></circle>
+            <circle class="ring-progress" id="preloaderRingProgress" cx="80" cy="80" r="72"></circle>
+          </svg>
+
+          <div class="preloader-ring-logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+          </div>
+        </div>
+
+        <!-- Typography Counter -->
+        <div class="preloader-number-wrap">
+          <span class="preloader-count-val" id="preloaderCountVal">00</span><span class="preloader-percent-mark">%</span>
+        </div>
+
+        <!-- Micro Laser Track -->
+        <div class="preloader-line-track">
+          <div class="preloader-line-fill" id="preloaderLineFill"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="preloader-bottom-bar">
+        <span>BRAND STRATEGY &amp; DIGITAL IDENTITY</span>
+        <span>&copy; 2024 / ALL SYSTEMS READY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo-wrap" aria-label="Stackly Home">
+        <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img">
+      </a>
+      <nav class="nav-center-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost-dark">Login</a>
+        <a href="404.html" class="btn btn-primary nav-btn-pill">Start a project</a>
+      </div>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div class="hamburger-bars"><span></span><span></span><span></span></div>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link">Home</a>
+      <a href="services.html" class="mobile-drawer-link">Services</a>
+      <a href="about.html" class="mobile-drawer-link active">About</a>
+      <a href="blog.html" class="mobile-drawer-link">Blog</a>
+      <a href="contact.html" class="mobile-drawer-link">Contact</a>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-secondary" style="width:100%;">Login</a>
+      <a href="404.html" class="btn btn-primary" style="width:100%;">Start a project</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ====================================================================
+         SECTION 1 — HERO
+         ==================================================================== -->
+    <section class="about-hero" id="about-hero">
+      <div class="hero-glow-ambient"></div>
+      <div class="container about-hero-inner">
+
+        <div class="about-hero-left fade-up-element in-view">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-active">About</span>
+          </div>
+          <h1 class="about-hero-title">
+            We started Stackly because most creative agencies stop at the layer they're paid for.
+          </h1>
+        </div>
+
+        <div class="about-hero-right fade-up-element delay-2 in-view">
+          <p class="about-hero-body">
+            Tell us to fit with the stories that experience the most is ignored — because brands don't keep earning attention after launch.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2 — MISSION SPLIT (light bg + local image)
+         ==================================================================== -->
+    <section class="about-mission">
+      <div class="container about-mission-grid">
+
+        <!-- Left: Image -->
+        <div class="about-mission-img-col fade-up-element delay-1">
+          <div class="about-mission-img-wrap">
+            <img src="images/Background.webp" alt="Social media brand magnetic attraction illustration" class="about-mission-img">
+          </div>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="about-mission-text-col fade-up-element delay-2">
+          <span class="section-tag-teal">Founding</span>
+          <h2 class="about-mission-heading">
+            Build brands that hold up long after we've handed over the files.
+          </h2>
+          <p class="about-mission-body">
+            Really what lies between the most creative work's experience and passive value is the policy and the ability to act on. We drive strategy, design identity, and build the digital experience — the full brand stack — so nothing important left behind to be discovered, shared, it's built.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3 — DECADE TIMELINE (dark bg)
+         ==================================================================== -->
+    <section class="about-timeline">
+      <div class="container about-timeline-grid">
+
+        <!-- Left: Heading + Milestones -->
+        <div class="about-timeline-left fade-up-element">
+          <h2 class="about-timeline-heading">
+            Ten years, one layer at a time.
+          </h2>
+          <ol class="milestone-list">
+            <li class="milestone-item fade-up-element delay-1">
+              <span class="milestone-year">2015</span>
+              <div class="milestone-body">
+                <h3 class="milestone-title">Founded as a two-person design studio</h3>
+                <p class="milestone-desc">Solving naming gaps and mismatched visuals for scale-up founders in Berlin.</p>
+              </div>
+            </li>
+            <li class="milestone-item fade-up-element delay-2">
+              <span class="milestone-year">2017</span>
+              <div class="milestone-body">
+                <h3 class="milestone-title">First embedded position taken</h3>
+                <p class="milestone-desc">Directly delivering work alongside in-house teams — our first full-design-as-a-service contract.</p>
+              </div>
+            </li>
+            <li class="milestone-item fade-up-element delay-3">
+              <span class="milestone-year">2020</span>
+              <div class="milestone-body">
+                <h3 class="milestone-title">Web & digital design practice launched</h3>
+                <p class="milestone-desc">Added the third practice to take strategy into actual products that people use.</p>
+              </div>
+            </li>
+            <li class="milestone-item fade-up-element delay-4">
+              <span class="milestone-year">2022</span>
+              <div class="milestone-body">
+                <h3 class="milestone-title">Brand systems practice formalized</h3>
+                <p class="milestone-desc">Built the governance layer so brands keep quality without us in every room.</p>
+              </div>
+            </li>
+            <li class="milestone-item fade-up-element delay-1">
+              <span class="milestone-year">2024</span>
+              <div class="milestone-body">
+                <h3 class="milestone-title">10 specialists, 12 countries</h3>
+                <p class="milestone-desc">120 brands shipped. Same promise, bigger reach.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Right: Eyebrow note -->
+        <div class="about-timeline-right fade-up-element delay-2">
+          <p class="timeline-aside-text">The short version of how brands get here.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4 — FOUR VALUES IMAGE GRID (light bg)
+         ==================================================================== -->
+    <section class="about-values">
+      <div class="container">
+        <h2 class="about-values-heading fade-up-element">Four things that don't flex<br>on a deadline.</h2>
+
+        <div class="values-image-grid">
+
+          <div class="value-img-card fade-up-element delay-1">
+            <div class="value-img-wrap">
+              <img src="images/Component 18.webp" alt="Product craft — premium skincare packaging" class="value-img">
+              <div class="value-img-overlay">
+                <span class="value-category">Craft</span>
+                <h3 class="value-card-title">Obsessive attention to craft</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="value-img-card fade-up-element delay-2">
+            <div class="value-img-wrap">
+              <img src="images/Component 17.webp" alt="Brand elevation — hot air balloon with brand marks" class="value-img">
+              <div class="value-img-overlay">
+                <span class="value-category">Presence</span>
+                <h3 class="value-card-title">Brand that travels further than expected</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="value-img-card fade-up-element delay-3">
+            <div class="value-img-wrap">
+              <img src="images/Component 19.webp" alt="Brand voice — megaphone communication" class="value-img">
+              <div class="value-img-overlay">
+                <span class="value-category">Voice</span>
+                <h3 class="value-card-title">A voice that cuts through noise</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="value-img-card fade-up-element delay-4">
+            <div class="value-img-wrap">
+              <img src="images/Component 20.webp" alt="Identity — distinctive personal brand expression" class="value-img">
+              <div class="value-img-overlay">
+                <span class="value-category">Identity</span>
+                <h3 class="value-card-title">An identity that actually sticks</h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5 — TEAM (light bg)
+         ==================================================================== -->
+    <section class="about-team">
+      <div class="container">
+
+        <div class="section-header-split fade-up-element">
+          <h2 class="section-title" style="color:#111215;">
+            The people setting<br>direction.
+          </h2>
+          <a href="404.html" class="about-team-cta-link">
+            Meet our CEO <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="team-cards-grid">
+
+          <div class="team-card fade-up-element delay-1">
+            <div class="team-card-img-wrap">
+              <img src="images/Gradient.webp" alt="Marcus Vance — Head of Strategy" class="team-card-img">
+            </div>
+            <div class="team-card-info">
+              <span class="team-card-name">Marcus Vance</span>
+              <span class="team-card-role">Head of Strategy</span>
+            </div>
+          </div>
+
+          <div class="team-card fade-up-element delay-2">
+            <div class="team-card-img-wrap">
+              <img src="images/Gradient (1).webp" alt="Priya Rhoades — Creative Director" class="team-card-img">
+            </div>
+            <div class="team-card-info">
+              <span class="team-card-name">Priya Rhoades</span>
+              <span class="team-card-role">Creative Director</span>
+            </div>
+          </div>
+
+          <div class="team-card fade-up-element delay-3">
+            <div class="team-card-img-wrap">
+              <img src="images/Gradient (2).webp" alt="Nav Lambert — Head of Digital" class="team-card-img">
+            </div>
+            <div class="team-card-info">
+              <span class="team-card-name">Nav Lambert</span>
+              <span class="team-card-role">Head of Digital</span>
+            </div>
+          </div>
+
+          <div class="team-card team-card-ceo fade-up-element delay-4">
+            <div class="team-card-img-wrap">
+              <img src="images/Component 18 (1).webp" alt="Elena Cho — Co-founder & CEO" class="team-card-img">
+            </div>
+            <div class="team-card-info">
+              <span class="team-card-name">Elena Cho</span>
+              <span class="team-card-role">Co-founder & CEO</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6 — STATS BANNER (amber)
+         ==================================================================== -->
+    <section class="section-stat-banner" aria-label="Studio stats">
+      <div class="container">
+        <div class="stat-banner-grid">
+          <div class="banner-stat-item fade-up-element delay-1">
+            <span class="banner-stat-number">45</span>
+            <span class="banner-stat-text">specialists in-house at Stackly</span>
+          </div>
+          <div class="banner-stat-item fade-up-element delay-2">
+            <span class="banner-stat-number">10</span>
+            <span class="banner-stat-text">partnerships globally</span>
+          </div>
+          <div class="banner-stat-item fade-up-element delay-3">
+            <span class="banner-stat-number">98%</span>
+            <span class="banner-stat-text">clients recommend our work</span>
+          </div>
+          <div class="banner-stat-item fade-up-element delay-4">
+            <span class="banner-stat-number">120+</span>
+            <span class="banner-stat-text">brands in play</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 7 — HIRE / CULTURE SPLIT (light bg)
+         ==================================================================== -->
+    <section class="about-hire">
+      <div class="container about-hire-grid">
+
+        <div class="about-hire-left fade-up-element">
+          <span class="section-tag-gold">Get in touch</span>
+          <h2 class="about-hire-heading">
+            We hire slowly and stay small on purpose.
+          </h2>
+          <p class="about-hire-body">
+            Every designer at Stackly works directly with clients — because the best work comes from personal ownership for each and from teams who care about it.
+          </p>
+          <a href="404.html" class="about-hire-link">
+            See open roles <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="about-hire-img-col fade-up-element delay-2">
+          <div class="about-hire-img-wrap">
+            <img src="images/Gradient (3).webp" alt="Stackly team collaborating around a table" class="about-hire-img">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 8 — CAPABILITIES TICKER (dark bg)
+         ==================================================================== -->
+    <section class="section-tools-band about-caps-ticker" aria-label="Studio capabilities">
+      <div class="container">
+        <p class="tools-eyebrow">WHAT WE DO, DAY TO DAY</p>
+      </div>
+      <div class="tools-ticker-wrap">
+        <div class="tools-ticker-track">
+          <span class="tool-chip">Brand Strategy</span>
+          <span class="tool-chip">Naming</span>
+          <span class="tool-chip">Visual Identity</span>
+          <span class="tool-chip">Prototyping</span>
+          <span class="tool-chip">Web Design</span>
+          <span class="tool-chip">Motion</span>
+          <span class="tool-chip">Brand Systems</span>
+          <span class="tool-chip">Copywriting</span>
+          <span class="tool-chip">Not Generic</span>
+          <span class="tool-chip">Brand Strategy</span>
+          <span class="tool-chip">Naming</span>
+          <span class="tool-chip">Visual Identity</span>
+          <span class="tool-chip">Prototyping</span>
+          <span class="tool-chip">Web Design</span>
+          <span class="tool-chip">Motion</span>
+          <span class="tool-chip">Brand Systems</span>
+          <span class="tool-chip">Copywriting</span>
+          <span class="tool-chip">Not Generic</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 9 — CLOSING CTA (amber band)
+         ==================================================================== -->
+    <section class="section-services-cta" aria-label="CTA">
+      <div class="container">
+        <div class="cta-banner-content fade-up-element">
+          <h2 class="cta-banner-heading">
+            Curious what your brand looks<br>like from the outside?
+          </h2>
+          <a href="404.html" class="btn btn-dark-pill">Talk to the team</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <img src="images/logo.webp" alt="Stackly Logo" class="footer-brand-logo">
+          <p class="footer-bio-text">
+            Brand strategy, identity and digital design for companies that love surprises (the bad kind).
+          </p>
+          <form id="newsletterForm" class="newsletter-box">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">Subscribe <span>&rarr;</span></button>
+          </form>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Approach</a></li>
+            <li><a href="404.html">Case studies</a></li>
+            <li><a href="404.html">About</a></li>
+            <li><a href="404.html">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Brand Strategy</a></li>
+            <li><a href="404.html">Visual Identity</a></li>
+            <li><a href="404.html">Web & Digital Design</a></li>
+            <li><a href="404.html">Brand Systems</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-info">
+            <a href="404.html">hello@stackly.io</a>
+            <a href="404.html">+1 (415) 555-0142</a>
+            <span>Market station, Depot Mall, San Francisco</span>
+          </div>
+          <div class="footer-social-row">
+            <a href="404.html" class="social-circle-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.8v8.4h-2.8v-8.4M7.86 6.54a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Dribbble">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+                <path d="M8.5 2.5c2.5 5.5 4.5 11 6.5 19"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-watermark-wrap">
+        <span class="footer-watermark-text">STACKLY</span>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2024 Stackly Studio LLC. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="404.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span class="toast-msg">Subscribed successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

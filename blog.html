@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Stackly Brand & Creative Studio</title>
+  <meta name="description" content="Notes from inside the brands we build. Brand strategy, identity, systems, and digital design essays from Stackly studio.">
+  <meta name="theme-color" content="#111215">
+  <meta property="og:title" content="Blog — Stackly Brand & Creative Studio">
+  <meta property="og:description" content="Notes from inside the brands we build. Field notes from active engagements.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       PRELOADER (Luxury Split-Curtain & SVG Radial Ring)
+       ========================================================================== -->
+  <div id="stackly-preloader" class="stackly-preloader" role="status" aria-label="Loading Stackly">
+    <div class="preloader-curtain preloader-curtain--top"></div>
+    <div class="preloader-curtain preloader-curtain--bottom"></div>
+
+    <div class="preloader-stage">
+      <!-- Top studio metadata bar -->
+      <div class="preloader-top-bar">
+        <span class="preloader-live-tag"><span class="preloader-live-dot"></span> STACKLY STUDIO</span>
+        <span class="preloader-system-tag">INITIALIZING EXPERIENCE</span>
+      </div>
+
+      <!-- Central Iconic Ring & Logo -->
+      <div class="preloader-center">
+        <div class="preloader-ring-wrap">
+          <div class="preloader-ring-glow"></div>
+          
+          <svg class="preloader-svg-ring" viewBox="0 0 160 160">
+            <circle class="ring-bg" cx="80" cy="80" r="72"></circle>
+            <circle class="ring-orbit" cx="80" cy="80" r="64"></circle>
+            <circle class="ring-progress" id="preloaderRingProgress" cx="80" cy="80" r="72"></circle>
+          </svg>
+
+          <div class="preloader-ring-logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+          </div>
+        </div>
+
+        <!-- Typography Counter -->
+        <div class="preloader-number-wrap">
+          <span class="preloader-count-val" id="preloaderCountVal">00</span><span class="preloader-percent-mark">%</span>
+        </div>
+
+        <!-- Micro Laser Track -->
+        <div class="preloader-line-track">
+          <div class="preloader-line-fill" id="preloaderLineFill"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="preloader-bottom-bar">
+        <span>BRAND STRATEGY &amp; DIGITAL IDENTITY</span>
+        <span>&copy; 2024 / ALL SYSTEMS READY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo-wrap" aria-label="Stackly Home">
+        <img src="images/logo.webp" alt="Stackly Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-center-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost-dark">Log in</a>
+        <a href="404.html" class="btn btn-primary nav-btn-pill">Start a project</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div class="hamburger-bars">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <!-- Close Button -->
+    <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-drawer-link">Home</a>
+      <a href="services.html" class="mobile-drawer-link">Services</a>
+      <a href="about.html" class="mobile-drawer-link">About</a>
+      <a href="blog.html" class="mobile-drawer-link active">Blog</a>
+      <a href="contact.html" class="mobile-drawer-link">Contact</a>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-secondary" style="width: 100%;">Log in</a>
+      <a href="404.html" class="btn btn-primary" style="width: 100%;">Start a project</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ====================================================================
+         SECTION 1: BLOG HERO (DARK)
+         ==================================================================== -->
+    <section class="blog-hero" id="blogHero">
+      <div class="hero-glow-ambient"></div>
+      <div class="container blog-hero-inner">
+        <span class="blog-eyebrow fade-up-element in-view">Insights</span>
+        <h1 class="blog-hero-title fade-up-element delay-1 in-view">
+          Notes from inside the<br>brands we build.
+        </h1>
+        
+        <!-- Live Article Search -->
+        <div class="blog-search-wrap fade-up-element delay-2 in-view">
+          <div class="blog-search-box">
+            <input type="text" id="blogSearchInput" class="blog-search-input" placeholder="Search articles — try 'brand identity' or 'packaging'" autocomplete="off">
+            <span class="blog-search-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: FEATURED ARTICLE & ARTICLES GRID (LIGHT)
+         ==================================================================== -->
+    <section class="blog-content-section" id="blogArticles">
+      <div class="container">
+
+        <!-- Featured Post Card -->
+        <article class="featured-post-card fade-up-element in-view" data-category="strategy">
+          <div class="featured-card-grid">
+            <div class="featured-img-wrap">
+              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80" alt="Design team evaluating brand identity post-its and moodboards" class="featured-card-img">
+            </div>
+            <div class="featured-content">
+              <span class="article-cat-tag tag-strategy">Brand Strategy</span>
+              <h2 class="featured-title">
+                <a href="404.html">What actually breaks during a rebrand (and how to plan for it)</a>
+              </h2>
+              <p class="featured-excerpt">
+                Flies and fallacieswards from a decade of rebrands — most of them use the same usual brains budget timeline.
+              </p>
+              <div class="article-meta">
+                <span class="meta-author">Elena Cho</span>
+                <span class="meta-sep">·</span>
+                <span class="meta-date">Oct 2, 2024</span>
+                <span class="meta-sep">·</span>
+                <span class="meta-read">12 min read</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category Filter Tabs -->
+        <div class="blog-filter-bar fade-up-element delay-1 in-view" role="tablist" aria-label="Filter articles by category">
+          <button class="filter-chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-chip" data-filter="strategy" role="tab" aria-selected="false">Strategy</button>
+          <button class="filter-chip" data-filter="identity" role="tab" aria-selected="false">Identity</button>
+          <button class="filter-chip" data-filter="web-digital" role="tab" aria-selected="false">Web & Digital</button>
+          <button class="filter-chip" data-filter="packaging" role="tab" aria-selected="false">Packaging</button>
+          <button class="filter-chip" data-filter="culture" role="tab" aria-selected="false">Culture</button>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="blog-grid" id="blogGrid">
+
+          <!-- Card 1: Identity -->
+          <article class="blog-card fade-up-element delay-1" data-category="identity">
+            <div class="blog-card-img-wrap">
+              <img src="images/Component 20.webp" alt="Identity design concept portrait" class="blog-card-img">
+            </div>
+            <div class="blog-card-body">
+              <span class="article-cat-tag tag-identity">Identity</span>
+              <h3 class="blog-card-title">
+                <a href="404.html">Why we stopped designing logos before naming</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                A naming-first argument. Three studio studios tell a plenty of truths.
+              </p>
+              <div class="article-meta">
+                <span class="meta-author">Marcus Vance</span>
+                <span class="meta-sep">·</span>
+                <span class="meta-read">7 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Web & Digital -->
+          <article class="blog-card fade-up-element delay-2" data-category="web-digital">
+            <div class="blog-card-img-wrap">
+              <img src="images/Component 6.webp" alt="3D isometric web systems and digital interface" class="blog-card-img">
+            </div>
+            <div class="blog-card-body">
+              <span class="article-cat-tag tag-web-digital">Web & Digital</span>
+              <h3 class="blog-card-title">
+                <a href="404.html">Dominance doesn't mean zero personality</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                How to roll out a design system without your users losing sight of it.
+              </p>
+              <div class="article-meta">
+                <span class="meta-author">Nav Lambert</span>
+                <span class="meta-sep">·</span>
+                <span class="meta-read">9 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Packaging -->
+          <article class="blog-card fade-up-element delay-3" data-category="packaging">
+            <div class="blog-card-img-wrap">
+              <img src="images/Component 18.webp" alt="Eco-friendly minimalist packaging mockups" class="blog-card-img">
+            </div>
+            <div class="blog-card-body">
+              <span class="article-cat-tag tag-packaging">Packaging</span>
+              <h3 class="blog-card-title">
+                <a href="404.html">The packaging system that started as a mockup</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                A case study in turning a hero product's off-shelf system.
+              </p>
+              <div class="article-meta">
+                <span class="meta-author">Priya Rhoades</span>
+                <span class="meta-sep">·</span>
+                <span class="meta-read">7 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Strategy -->
+          <article class="blog-card fade-up-element delay-1" data-category="strategy">
+            <div class="blog-card-img-wrap">
+              <img src="images/Background+Border.webp" alt="Brand brief typography board and strategic notes" class="blog-card-img">
+            </div>
+            <div class="blog-card-body">
+              <span class="article-cat-tag tag-strategy">Strategy</span>
+              <h3 class="blog-card-title">
+                <a href="404.html">Reading a brand brief like a strategist, not a designer</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                The four questions that actually unpick where a brand's ambition lies.
+              </p>
+              <div class="article-meta">
+                <span class="meta-author">Elena Cho</span>
+                <span class="meta-sep">·</span>
+                <span class="meta-read">6 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Culture -->
+          <article class="blog-card fade-up-element delay-2" data-category="culture">
+            <div class="blog-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80" alt="Row of colorful sharpened colored pencils representing team diversity" class="blog-card-img">
+            </div>
+            <div class="blog-card-body">
+              <span class="article-cat-tag tag-culture">Culture</span>
+              <h3 class="blog-card-title">
+                <a href="404.html">Why every designer here still joins client standups</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                The case against account managers as a translation layer.
+              </p>
+              <div class="article-meta">
+                <span class="meta-author">Priya Rhoades</span>
+                <span class="meta-sep">·</span>
+                <span class="meta-read">5 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Strategy -->
+          <article class="blog-card fade-up-element delay-3" data-category="strategy">
+            <div class="blog-card-img-wrap">
+              <img src="images/Component 17.webp" alt="Hot air balloon rising above landscape" class="blog-card-img">
+            </div>
+            <div class="blog-card-body">
+              <span class="article-cat-tag tag-strategy">Strategy</span>
+              <h3 class="blog-card-title">
+                <a href="404.html">Brand equity that outlives quarterly campaigns</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Building visual assets and guidelines that accumulate compound recognition.
+              </p>
+              <div class="article-meta">
+                <span class="meta-author">Elena Cho</span>
+                <span class="meta-sep">·</span>
+                <span class="meta-read">8 min read</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No Results Fallback -->
+        <div class="blog-no-results" id="blogNoResults" style="display: none;">
+          <p>No articles found matching your query.</p>
+          <button class="btn btn-secondary btn-sm" id="resetFilterBtn">View all articles</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: MOST-READ THIS QUARTER (LIGHT GRAY)
+         ==================================================================== -->
+    <section class="blog-most-read-section" aria-label="Most-read articles">
+      <div class="container">
+        
+        <div class="most-read-header fade-up-element">
+          <div class="most-read-header-left">
+            <span class="quarter-tag">Quarter Two / 2024</span>
+            <h2 class="most-read-heading">Most-read this quarter.</h2>
+          </div>
+          <span class="most-read-hint">Drag to scroll through the list</span>
+        </div>
+
+        <div class="most-read-cards-grid">
+
+          <!-- 01 -->
+          <div class="most-read-card fade-up-element delay-1">
+            <span class="most-read-num">01</span>
+            <h3 class="most-read-title">
+              <a href="404.html">What breaks during a rebrand</a>
+            </h3>
+            <div class="most-read-meta">
+              <span>Elena Cho</span>
+              <span class="meta-sep">·</span>
+              <span>Strategy</span>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="most-read-card fade-up-element delay-2">
+            <span class="most-read-num">02</span>
+            <h3 class="most-read-title">
+              <a href="404.html">Consistency doesn't mean zero personality</a>
+            </h3>
+            <div class="most-read-meta">
+              <span>Nav Lambert</span>
+              <span class="meta-sep">·</span>
+              <span>Web & Digital</span>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="most-read-card fade-up-element delay-3">
+            <span class="most-read-num">03</span>
+            <h3 class="most-read-title">
+              <a href="404.html">Reading a brand brief like a strategist</a>
+            </h3>
+            <div class="most-read-meta">
+              <span>Elena Cho</span>
+              <span class="meta-sep">·</span>
+              <span>Strategy</span>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="most-read-card fade-up-element delay-4">
+            <span class="most-read-num">04</span>
+            <h3 class="most-read-title">
+              <a href="404.html">Why we stopped designing logos before naming</a>
+            </h3>
+            <div class="most-read-meta">
+              <span>Marcus Vance</span>
+              <span class="meta-sep">·</span>
+              <span>Identity</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: NEWSLETTER CALLOUT (DARK)
+         ==================================================================== -->
+    <section class="blog-newsletter-banner" aria-label="Newsletter Subscription">
+      <div class="container">
+        <div class="blog-newsletter-inner fade-up-element">
+          <h2 class="blog-newsletter-title">One good essay a month. No noise.</h2>
+          <p class="blog-newsletter-sub">Field notes from active engagements — never a product pitch.</p>
+
+          <form id="blogNewsletterForm" class="blog-newsletter-form">
+            <input type="email" placeholder="you@company.com" class="blog-newsletter-input" required>
+            <button type="submit" class="btn btn-primary blog-newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: PAGINATION ROW
+         ==================================================================== -->
+    <nav class="blog-pagination-section" aria-label="Blog Pagination">
+      <div class="container">
+        <div class="pagination-pills fade-up-element">
+          <button class="page-pill page-arrow" aria-label="Previous page" disabled>&larr;</button>
+          <button class="page-pill active" aria-current="page">1</button>
+          <button class="page-pill">2</button>
+          <button class="page-pill">3</button>
+          <button class="page-pill page-arrow" aria-label="Next page">&rarr;</button>
+        </div>
+      </div>
+    </nav>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <img src="images/logo.webp" alt="Stackly Logo" class="footer-brand-logo">
+          <p class="footer-bio-text">
+            Brand strategy, identity and digital design for companies that love surprises (the bad kind).
+          </p>
+          <form id="newsletterForm" class="newsletter-box">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">Subscribe <span>&rarr;</span></button>
+          </form>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Approach</a></li>
+            <li><a href="404.html">Case studies</a></li>
+            <li><a href="404.html">About</a></li>
+            <li><a href="404.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html">Brand Strategy</a></li>
+            <li><a href="404.html">Visual Identity</a></li>
+            <li><a href="404.html">Web & Digital Design</a></li>
+            <li><a href="404.html">Brand Systems</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-info">
+            <a href="404.html">hello@stackly.io</a>
+            <a href="404.html">+1 (415) 555-0142</a>
+            <span>Market station, Depot Mall, San Francisco</span>
+          </div>
+          <div class="footer-social-row">
+            <a href="404.html" class="social-circle-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.8v8.4h-2.8v-8.4M7.86 6.54a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="social-circle-link" aria-label="Dribbble">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+                <path d="M8.5 2.5c2.5 5.5 4.5 11 6.5 19"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-watermark-wrap">
+        <span class="footer-watermark-text">STACKLY</span>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2024 Stackly Studio LLC. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="404.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span class="toast-msg">Subscribed successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
